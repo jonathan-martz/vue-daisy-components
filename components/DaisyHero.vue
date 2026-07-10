@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyHeroProps } from '../types/hero'
+import type { DaisyHeroProps } from '../interfaces/DaisyHeroProps'
 const { className } = withDefaults(defineProps<DaisyHeroProps>(), {
   className: '',
 })

@@ -1,1 +1,1 @@
-export type { DaisyBreadcrumbsProps } from './interfaces/DaisyBreadcrumbsProps'
+export type { DaisyBreadcrumbsProps } from '../interfaces/DaisyBreadcrumbsProps'

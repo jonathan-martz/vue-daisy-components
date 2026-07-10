@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyMaskProps } from '../types/mask'
+import type { DaisyMaskProps } from '../interfaces/DaisyMaskProps'
 const { className } = withDefaults(defineProps<DaisyMaskProps>(), {
   className: '',
 })

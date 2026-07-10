@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyRangeProps } from '../types/range'
+import type { DaisyRangeProps } from '../interfaces/DaisyRangeProps'
 const { className } = withDefaults(defineProps<DaisyRangeProps>(), {
   className: '',
 })

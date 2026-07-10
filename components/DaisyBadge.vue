@@ -1,20 +1,19 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { DaisyBadgeProps } from '../types/badge'
-const {
-  className,
-  variant,
-  size,
-  outline,
-  label,
-} = withDefaults(defineProps<DaisyBadgeProps>(), {
+
+const props = withDefaults(defineProps<DaisyBadgeProps>(), {
   className: '',
-  variant: 'badge-neutral',
+  variant: 'neutral',
   size: 'badge-md',
   outline: false,
 })
+
+const variantClass = computed(() => `badge-${props.variant}`)
 </script>
+
 <template>
-  <span class="badge" :class="[className, variant, size, { 'badge-outline': outline }]">
-    <slot>{{ label }}</slot>
+  <span class="badge" :class="[props.className, variantClass, props.size, { 'badge-outline': props.outline }]">
+    <slot>{{ props.label }}</slot>
   </span>
 </template>

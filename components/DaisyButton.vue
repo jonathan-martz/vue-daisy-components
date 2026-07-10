@@ -1,23 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { DaisyButtonProps, ButtonResponsiveSizeMap } from '../types/button'
-const {
-  className,
-  variant,
-  size,
-  responsiveSize,
-  outline,
-  disabled,
-  loading,
-  block,
-  circle,
-  square,
-  active,
-  type,
-} = withDefaults(defineProps<DaisyButtonProps>(), {
+import type { DaisyButtonProps } from '../interfaces/DaisyButtonProps'
+import type { ButtonSize } from '../types/ButtonSize'
+import type { ButtonResponsiveSizeMap } from '../types/ButtonResponsiveSizeMap'
+import type { ButtonVariant } from '../types/ButtonVariant'
+
+const props = withDefaults(defineProps<DaisyButtonProps>(), {
   className: '',
-  variant: 'btn-primary',
-  responsiveSize: () => ({ md: 'btn-md' }),
+  variant: 'primary' as ButtonVariant,
+  responsiveSize: () => ({ md: 'md' as ButtonSize }),
   outline: false,
   disabled: false,
   loading: false,
@@ -27,40 +18,49 @@ const {
   active: false,
   type: 'button',
 })
+
 const emit = defineEmits<{
   click: [event: MouseEvent]
 }>()
+
+const variantClass = computed(() => `btn-${props.variant}`)
+
+const sizeClass = computed(() => (props.size ? `btn-${props.size}` : undefined))
+
 const responsiveSizeClasses = computed(() => {
-  if (!responsiveSize) return []
+  if (!props.responsiveSize) return []
+
   const classes: string[] = []
-  for (const breakpoint in responsiveSize) {
-    const currentSize = responsiveSize[breakpoint as keyof ButtonResponsiveSizeMap]
-    if (currentSize) classes.push(`${breakpoint}:${currentSize}`)
+  for (const breakpoint in props.responsiveSize) {
+    const currentSize = props.responsiveSize[breakpoint as keyof ButtonResponsiveSizeMap]
+    if (currentSize) classes.push(`${breakpoint}:btn-${currentSize}`)
   }
+
   return classes
 })
 </script>
+
 <template>
   <button
     class="btn"
     :class="[
-      className,
-      variant,
-      size,
+      props.className,
+      variantClass,
+      sizeClass,
       ...responsiveSizeClasses,
       {
-        'btn-outline': outline,
-        'btn-block': block,
-        'btn-circle': circle,
-        'btn-square': square,
-        'btn-active': active,
+        'btn-outline': props.outline,
+        'btn-block': props.block,
+        'btn-circle': props.circle,
+        'btn-square': props.square,
+        'btn-active': props.active,
       },
     ]"
-    :disabled="disabled || loading"
-    :type="type"
+    :disabled="props.disabled || props.loading"
+    :type="props.type"
     @click="emit('click', $event)"
   >
-    <span v-if="loading" class="loading loading-spinner loading-sm" />
+    <span v-if="props.loading" class="loading loading-spinner loading-sm" />
     <slot name="icon-left" />
     <slot />
     <slot name="icon-right" />

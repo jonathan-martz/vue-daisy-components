@@ -1,1 +1,1 @@
-export type { DaisyTableProps } from './interfaces/DaisyTableProps'
+export type { DaisyTableProps } from '../interfaces/DaisyTableProps'

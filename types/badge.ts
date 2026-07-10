@@ -1,3 +1,3 @@
-export type { DaisyBadgeProps } from './interfaces/DaisyBadgeProps'
-export type { BadgeVariant } from './types/BadgeVariant'
-export type { BadgeSize } from './types/BadgeSize'
+export type { DaisyBadgeProps } from '../interfaces/DaisyBadgeProps'
+export type { BadgeVariant } from './BadgeVariant'
+export type { BadgeSize } from './BadgeSize'

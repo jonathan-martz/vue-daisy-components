@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyMenuProps } from '../types/menu'
+import type { DaisyMenuProps } from '../interfaces/DaisyMenuProps'
 const { className } = withDefaults(defineProps<DaisyMenuProps>(), {
   className: '',
 })

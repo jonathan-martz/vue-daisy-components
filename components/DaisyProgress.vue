@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyProgressProps } from '../types/progress'
+import type { DaisyProgressProps } from '../interfaces/DaisyProgressProps'
 const { className } = withDefaults(defineProps<DaisyProgressProps>(), {
   className: '',
 })

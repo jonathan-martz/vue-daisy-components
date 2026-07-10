@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyRadialProgressProps } from '../types/radial-progress'
+import type { DaisyRadialProgressProps } from '../interfaces/DaisyRadialProgressProps'
 const { className } = withDefaults(defineProps<DaisyRadialProgressProps>(), {
   className: '',
 })

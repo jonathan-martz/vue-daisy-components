@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyAccordionProps } from '../types/accordion'
+import type { DaisyAccordionProps } from '../interfaces/DaisyAccordionProps'
 const { className } = withDefaults(defineProps<DaisyAccordionProps>(), {
   className: '',
 })

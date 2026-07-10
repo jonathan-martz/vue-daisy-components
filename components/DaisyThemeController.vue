@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyThemeControllerProps } from '../types/theme-controller'
+import type { DaisyThemeControllerProps } from '../interfaces/DaisyThemeControllerProps'
 const { className } = withDefaults(defineProps<DaisyThemeControllerProps>(), {
   className: '',
 })

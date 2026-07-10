@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisySkeletonProps } from '../types/skeleton'
+import type { DaisySkeletonProps } from '../interfaces/DaisySkeletonProps'
 const { className } = withDefaults(defineProps<DaisySkeletonProps>(), {
   className: '',
 })

@@ -1,1 +1,1 @@
-export type { DaisyRadioProps } from './interfaces/DaisyRadioProps'
+export type { DaisyRadioProps } from '../interfaces/DaisyRadioProps'

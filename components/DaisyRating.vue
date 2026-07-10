@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyRatingProps } from '../types/rating'
+import type { DaisyRatingProps } from '../interfaces/DaisyRatingProps'
 const { className } = withDefaults(defineProps<DaisyRatingProps>(), {
   className: '',
 })

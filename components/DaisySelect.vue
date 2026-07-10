@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisySelectProps } from '../types/select'
+import type { DaisySelectProps } from '../interfaces/DaisySelectProps'
 const { className } = withDefaults(defineProps<DaisySelectProps>(), {
   className: '',
 })

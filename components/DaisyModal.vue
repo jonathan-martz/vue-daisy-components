@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyModalProps } from '../types/modal'
+import type { DaisyModalProps } from '../interfaces/DaisyModalProps'
 const { className } = withDefaults(defineProps<DaisyModalProps>(), {
   className: '',
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyCalendarProps } from '../types/calendar'
+import type { DaisyCalendarProps } from '../interfaces/DaisyCalendarProps'
 const { className } = withDefaults(defineProps<DaisyCalendarProps>(), {
   className: '',
 })

@@ -1,1 +1,1 @@
-export type { Variant } from './types/Variant'
+export type { Variant } from './Variant'

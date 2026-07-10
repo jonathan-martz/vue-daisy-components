@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyLoadingProps } from '../types/loading'
+import type { DaisyLoadingProps } from '../interfaces/DaisyLoadingProps'
 const { className } = withDefaults(defineProps<DaisyLoadingProps>(), {
   className: '',
 })

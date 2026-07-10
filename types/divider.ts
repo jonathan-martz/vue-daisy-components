@@ -1,1 +1,1 @@
-export type { DaisyDividerProps } from './interfaces/DaisyDividerProps'
+export type { DaisyDividerProps } from '../interfaces/DaisyDividerProps'

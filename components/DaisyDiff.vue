@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyDiffProps } from '../types/diff'
+import type { DaisyDiffProps } from '../interfaces/DaisyDiffProps'
 const { className } = withDefaults(defineProps<DaisyDiffProps>(), {
   className: '',
 })

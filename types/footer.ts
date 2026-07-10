@@ -1,1 +1,1 @@
-export type { DaisyFooterProps } from './interfaces/DaisyFooterProps'
+export type { DaisyFooterProps } from '../interfaces/DaisyFooterProps'

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyDropdownProps } from '../types/dropdown'
+import type { DaisyDropdownProps } from '../interfaces/DaisyDropdownProps'
 const { className } = withDefaults(defineProps<DaisyDropdownProps>(), {
   className: '',
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyCheckboxProps } from '../types/checkbox'
+import type { DaisyCheckboxProps } from '../interfaces/DaisyCheckboxProps'
 const { className } = withDefaults(defineProps<DaisyCheckboxProps>(), {
   className: '',
 })

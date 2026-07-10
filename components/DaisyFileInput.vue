@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyFileInputProps } from '../types/file-input'
+import type { DaisyFileInputProps } from '../interfaces/DaisyFileInputProps'
 const { className } = withDefaults(defineProps<DaisyFileInputProps>(), {
   className: '',
 })

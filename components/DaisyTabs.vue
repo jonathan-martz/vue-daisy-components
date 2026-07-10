@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyTabsProps } from '../types/tabs'
+import type { DaisyTabsProps } from '../interfaces/DaisyTabsProps'
 const { className } = withDefaults(defineProps<DaisyTabsProps>(), {
   className: '',
 })

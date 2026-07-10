@@ -1,1 +1,1 @@
-export type { DaisyModalProps } from './interfaces/DaisyModalProps'
+export type { DaisyModalProps } from '../interfaces/DaisyModalProps'

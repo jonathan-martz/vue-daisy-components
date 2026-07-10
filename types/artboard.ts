@@ -1,1 +1,1 @@
-export type { DaisyArtboardProps } from './interfaces/DaisyArtboardProps'
+export type { DaisyArtboardProps } from '../interfaces/DaisyArtboardProps'

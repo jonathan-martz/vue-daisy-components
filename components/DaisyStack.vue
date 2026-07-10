@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyStackProps } from '../types/stack'
+import type { DaisyStackProps } from '../interfaces/DaisyStackProps'
 const { className } = withDefaults(defineProps<DaisyStackProps>(), {
   className: '',
 })

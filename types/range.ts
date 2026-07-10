@@ -1,1 +1,1 @@
-export type { DaisyRangeProps } from './interfaces/DaisyRangeProps'
+export type { DaisyRangeProps } from '../interfaces/DaisyRangeProps'

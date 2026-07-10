@@ -1,1 +1,1 @@
-export type { DaisyChatProps } from './interfaces/DaisyChatProps'
+export type { DaisyChatProps } from '../interfaces/DaisyChatProps'

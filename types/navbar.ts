@@ -1,1 +1,1 @@
-export type { DaisyNavbarProps } from './interfaces/DaisyNavbarProps'
+export type { DaisyNavbarProps } from '../interfaces/DaisyNavbarProps'

@@ -1,1 +1,1 @@
-export type { DaisyPaginationProps } from './interfaces/DaisyPaginationProps'
+export type { DaisyPaginationProps } from '../interfaces/DaisyPaginationProps'

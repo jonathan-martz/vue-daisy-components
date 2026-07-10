@@ -1,1 +1,1 @@
-export type { DaisyTabsProps } from './interfaces/DaisyTabsProps'
+export type { DaisyTabsProps } from '../interfaces/DaisyTabsProps'

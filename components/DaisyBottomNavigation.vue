@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyBottomNavigationProps } from '../types/bottom-navigation'
+import type { DaisyBottomNavigationProps } from '../interfaces/DaisyBottomNavigationProps'
 const { className } = withDefaults(defineProps<DaisyBottomNavigationProps>(), {
   className: '',
 })

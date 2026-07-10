@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyLinkProps } from '../types/link'
+import type { DaisyLinkProps } from '../interfaces/DaisyLinkProps'
 const { className } = withDefaults(defineProps<DaisyLinkProps>(), {
   className: '',
 })

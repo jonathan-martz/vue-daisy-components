@@ -1,1 +1,1 @@
-export type { DaisyDrawerProps } from './interfaces/DaisyDrawerProps'
+export type { DaisyDrawerProps } from '../interfaces/DaisyDrawerProps'

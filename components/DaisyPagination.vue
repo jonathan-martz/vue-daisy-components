@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyPaginationProps } from '../types/pagination'
+import type { DaisyPaginationProps } from '../interfaces/DaisyPaginationProps'
 const { className } = withDefaults(defineProps<DaisyPaginationProps>(), {
   className: '',
 })

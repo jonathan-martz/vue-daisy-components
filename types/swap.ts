@@ -1,1 +1,1 @@
-export type { DaisySwapProps } from './interfaces/DaisySwapProps'
+export type { DaisySwapProps } from '../interfaces/DaisySwapProps'

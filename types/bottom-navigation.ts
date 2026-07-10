@@ -1,1 +1,1 @@
-export type { DaisyBottomNavigationProps } from './interfaces/DaisyBottomNavigationProps'
+export type { DaisyBottomNavigationProps } from '../interfaces/DaisyBottomNavigationProps'

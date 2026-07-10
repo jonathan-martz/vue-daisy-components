@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyRadioProps } from '../types/radio'
+import type { DaisyRadioProps } from '../interfaces/DaisyRadioProps'
 const { className } = withDefaults(defineProps<DaisyRadioProps>(), {
   className: '',
 })

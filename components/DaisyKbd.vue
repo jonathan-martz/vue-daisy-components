@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyKbdProps } from '../types/kbd'
+import type { DaisyKbdProps } from '../interfaces/DaisyKbdProps'
 const { className } = withDefaults(defineProps<DaisyKbdProps>(), {
   className: '',
 })

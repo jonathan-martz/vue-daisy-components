@@ -1,1 +1,1 @@
-export type { DaisyAvatarProps } from './interfaces/DaisyAvatarProps'
+export type { DaisyAvatarProps } from '../interfaces/DaisyAvatarProps'

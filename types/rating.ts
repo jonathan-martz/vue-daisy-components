@@ -1,1 +1,1 @@
-export type { DaisyRatingProps } from './interfaces/DaisyRatingProps'
+export type { DaisyRatingProps } from '../interfaces/DaisyRatingProps'

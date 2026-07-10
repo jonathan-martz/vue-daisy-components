@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyBreadcrumbsProps } from '../types/breadcrumbs'
+import type { DaisyBreadcrumbsProps } from '../interfaces/DaisyBreadcrumbsProps'
 const { className } = withDefaults(defineProps<DaisyBreadcrumbsProps>(), {
   className: '',
 })

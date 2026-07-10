@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisySwapProps } from '../types/swap'
+import type { DaisySwapProps } from '../interfaces/DaisySwapProps'
 const { className } = withDefaults(defineProps<DaisySwapProps>(), {
   className: '',
 })

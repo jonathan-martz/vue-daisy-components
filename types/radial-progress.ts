@@ -1,1 +1,1 @@
-export type { DaisyRadialProgressProps } from './interfaces/DaisyRadialProgressProps'
+export type { DaisyRadialProgressProps } from '../interfaces/DaisyRadialProgressProps'

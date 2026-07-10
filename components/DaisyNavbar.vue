@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyNavbarProps } from '../types/navbar'
+import type { DaisyNavbarProps } from '../interfaces/DaisyNavbarProps'
 const { className } = withDefaults(defineProps<DaisyNavbarProps>(), {
   className: '',
 })

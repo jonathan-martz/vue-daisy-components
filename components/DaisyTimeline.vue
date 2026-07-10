@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyTimelineProps } from '../types/timeline'
+import type { DaisyTimelineProps } from '../interfaces/DaisyTimelineProps'
 const { className } = withDefaults(defineProps<DaisyTimelineProps>(), {
   className: '',
 })

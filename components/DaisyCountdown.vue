@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyCountdownProps } from '../types/countdown'
+import type { DaisyCountdownProps } from '../interfaces/DaisyCountdownProps'
 const { className } = withDefaults(defineProps<DaisyCountdownProps>(), {
   className: '',
 })

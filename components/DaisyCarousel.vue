@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyCarouselProps } from '../types/carousel'
+import type { DaisyCarouselProps } from '../interfaces/DaisyCarouselProps'
 const { className } = withDefaults(defineProps<DaisyCarouselProps>(), {
   className: '',
 })

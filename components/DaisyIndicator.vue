@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyIndicatorProps } from '../types/indicator'
+import type { DaisyIndicatorProps } from '../interfaces/DaisyIndicatorProps'
 const { className } = withDefaults(defineProps<DaisyIndicatorProps>(), {
   className: '',
 })

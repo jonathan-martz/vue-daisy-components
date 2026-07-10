@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyTextareaProps } from '../types/textarea'
+import type { DaisyTextareaProps } from '../interfaces/DaisyTextareaProps'
 const { className } = withDefaults(defineProps<DaisyTextareaProps>(), {
   className: '',
 })

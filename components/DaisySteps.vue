@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyStepsProps } from '../types/steps'
+import type { DaisyStepsProps } from '../interfaces/DaisyStepsProps'
 const { className } = withDefaults(defineProps<DaisyStepsProps>(), {
   className: '',
 })

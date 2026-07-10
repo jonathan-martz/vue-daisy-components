@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyChatProps } from '../types/chat'
+import type { DaisyChatProps } from '../interfaces/DaisyChatProps'
 const { className } = withDefaults(defineProps<DaisyChatProps>(), {
   className: '',
 })

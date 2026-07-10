@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyToggleProps } from '../types/toggle'
+import type { DaisyToggleProps } from '../interfaces/DaisyToggleProps'
 const { className } = withDefaults(defineProps<DaisyToggleProps>(), {
   className: '',
 })

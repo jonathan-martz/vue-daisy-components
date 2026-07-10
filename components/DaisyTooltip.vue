@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyTooltipProps } from '../types/tooltip'
+import type { DaisyTooltipProps } from '../interfaces/DaisyTooltipProps'
 const { className } = withDefaults(defineProps<DaisyTooltipProps>(), {
   className: '',
 })

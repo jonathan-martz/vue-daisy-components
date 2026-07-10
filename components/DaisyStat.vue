@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyStatProps } from '../types/stat'
+import type { DaisyStatProps } from '../interfaces/DaisyStatProps'
 const { className } = withDefaults(defineProps<DaisyStatProps>(), {
   className: '',
 })

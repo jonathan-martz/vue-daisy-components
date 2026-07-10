@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faChevronRight, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
-import type { DaisyCollapseProps } from '../types/collapse'
+import type { DaisyCollapseProps } from '../interfaces/DaisyCollapseProps'
 const {
   className,
 } = withDefaults(defineProps<DaisyCollapseProps>(), {

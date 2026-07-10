@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyJoinProps } from '../types/join'
+import type { DaisyJoinProps } from '../interfaces/DaisyJoinProps'
 const { className } = withDefaults(defineProps<DaisyJoinProps>(), {
   className: '',
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DaisyDividerProps } from '../types/divider'
+import type { DaisyDividerProps } from '../interfaces/DaisyDividerProps'
 const { className } = withDefaults(defineProps<DaisyDividerProps>(), {
   className: '',
 })
