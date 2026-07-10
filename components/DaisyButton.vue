@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '../components.css'
+import '../../components.css'
 import { computed } from 'vue'
 import type { DaisyButtonProps } from '../interfaces/DaisyButtonProps'
 import type { ButtonSize } from '../types/ButtonSize'
