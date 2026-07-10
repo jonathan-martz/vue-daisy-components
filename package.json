@@ -1,6 +1,6 @@
 {
   "name": "vue-daisyui-components",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Vue Daisyui Components by MkaY",
   "keywords": [
     "vue",
@@ -18,8 +18,7 @@
   },
   "license": "MIT",
   "author": "Jonathan Martz",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.0",
     "@fortawesome/free-brands-svg-icons": "^7.3.0",

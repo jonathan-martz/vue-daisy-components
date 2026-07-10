@@ -1,6 +1,6 @@
 Schreibe mir eine List von VueJs Component mit dem Script Setup und lang="ts"  mit der Compoition api.
 
-Generieren mir die Component aus der Liste alle Komponenten aus dem File ./components.md 
+Generieren mir die Component aus der Liste alle Komponenten aus dem File /components.md 
 von Daisuyi
 
 Benutze die Doku für Informationen über die Komponenten.

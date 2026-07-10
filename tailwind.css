@@ -1,4 +1,0 @@
-@import "tailwindcss";
-@plugin "daisyui";
-/* Scan components */
-@source "./components/**/*.vue";
