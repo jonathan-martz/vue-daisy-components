@@ -1,56 +1,73 @@
-# DaisyUI Components Liste
+# Vue Daisy Components
 
-Hier ist eine nummerierte Liste von DaisyUI-Komponenten.
+DaisyUI Komponenten mit Vue 3 `<script setup lang="ts">`, TailwindCSS und FontAwesome.
 
-1. Accordion
-2. Alert
-3. Artboard
-4. Avatar
-5. Badge
-6. Bottom Navigation
-7. Breadcrumbs
-8. Button
-9. Calendar
-10. Card
-11. Carousel
-12. Chat
-13. Checkbox
-14. Collapse
-15. Countdown
-16. Diff
-17. Divider
-18. Drawer
-19. Dropdown
-20. File Input
-21. Footer
-22. Hero
-23. Indicator
-24. Input
-25. Join
-26. Kbd
-27. Link
-28. Loading
-29. Mask
-30. Menu
-31. Modal
-32. Navbar
-33. Pagination
-34. Progress
-35. Radial Progress
-36. Radio
-37. Range
-38. Rating
-39. Select
-40. Skeleton
-41. Stack
-42. Stat
-43. Steps
-44. Swap
-45. Table
-46. Tabs
-47. Textarea
-48. Theme Controller
-49. Timeline
-50. Toast
-51. Toggle
-52. Tooltip
+## Struktur
+
+- `components/` enthaelt alle Daisy-Komponenten als `Daisy*`
+- `types/interfaces/` enthaelt Interfaces
+- `types/types/` enthaelt Type-Aliase
+- `types/` enthaelt Re-Export-Dateien pro Komponente
+
+## Komponenten aus `components.md`
+
+1. DaisyAccordion
+2. DaisyAlert
+3. DaisyArtboard
+4. DaisyAvatar
+5. DaisyBadge
+6. DaisyBottomNavigation
+7. DaisyBreadcrumbs
+8. DaisyButton
+9. DaisyCalendar
+10. DaisyCard
+11. DaisyCarousel
+12. DaisyChat
+13. DaisyCheckbox
+14. DaisyCollapse
+15. DaisyCountdown
+16. DaisyDiff
+17. DaisyDivider
+18. DaisyDrawer
+19. DaisyDropdown
+20. DaisyFileInput
+21. DaisyFooter
+22. DaisyHero
+23. DaisyIndicator
+24. DaisyInput
+25. DaisyJoin
+26. DaisyKbd
+27. DaisyLink
+28. DaisyLoading
+29. DaisyMask
+30. DaisyMenu
+31. DaisyModal
+32. DaisyNavbar
+33. DaisyPagination
+34. DaisyProgress
+35. DaisyRadialProgress
+36. DaisyRadio
+37. DaisyRange
+38. DaisyRating
+39. DaisySelect
+40. DaisySkeleton
+41. DaisyStack
+42. DaisyStat
+43. DaisySteps
+44. DaisySwap
+45. DaisyTable
+46. DaisyTabs
+47. DaisyTextarea
+48. DaisyThemeController
+49. DaisyTimeline
+50. DaisyToast
+51. DaisyToggle
+52. DaisyTooltip
+
+## Beispiel (Nuxt)
+
+```vue
+<template>
+  <DaisyButton>Default Button</DaisyButton>
+</template>
+```
