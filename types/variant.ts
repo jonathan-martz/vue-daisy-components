@@ -1,0 +1,12 @@
+export type Variant =
+  | 'primary'
+  | 'secondary'
+  | 'accent'
+  | 'neutral'
+  | 'ghost'
+  | 'link'
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+
