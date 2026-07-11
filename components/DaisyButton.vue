@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import '../../components.css'
 import { computed } from 'vue'
 import type { DaisyButtonProps } from '../interfaces/DaisyButtonProps'
 import type { ButtonSize } from '../types/ButtonSize'
@@ -17,6 +16,7 @@ const props = withDefaults(defineProps<DaisyButtonProps>(), {
   circle: false,
   square: false,
   active: false,
+  size: '',
   type: 'button',
 })
 
@@ -27,6 +27,22 @@ const emit = defineEmits<{
 const variantClass = computed(() => `btn-${props.variant}`)
 
 const sizeClass = computed(() => (props.size ? `btn-${props.size}` : undefined))
+
+const buttonClasses = computed(() => {
+  return [
+    props.className,
+    variantClass.value, // .value falls es refs/computeds sind
+    sizeClass.value,
+    ...(Array.isArray(responsiveSizeClasses.value) ? responsiveSizeClasses.value : []),
+    {
+      'btn-outline': props.outline,
+      'btn-block': props.block,
+      'btn-circle': props.circle,
+      'btn-square': props.square,
+      'btn-active': props.active,
+    }
+  ]
+})
 
 const responsiveSizeClasses = computed(() => {
   if (!props.responsiveSize) return []
@@ -43,23 +59,11 @@ const responsiveSizeClasses = computed(() => {
 
 <template>
   <button
-    class="btn"
-    :class="[
-      props.className,
-      variantClass,
-      sizeClass,
-      ...responsiveSizeClasses,
-      {
-        'btn-outline': props.outline,
-        'btn-block': props.block,
-        'btn-circle': props.circle,
-        'btn-square': props.square,
-        'btn-active': props.active,
-      },
-    ]"
-    :disabled="props.disabled || props.loading"
-    :type="props.type"
-    @click="emit('click', $event)"
+      class="btn"
+      :class="buttonClasses"
+      :disabled="props.disabled || props.loading"
+      :type="props.type"
+      @click="emit('click', $event)"
   >
     <span v-if="props.loading" class="loading loading-spinner loading-sm" />
     <slot name="icon-left" />
