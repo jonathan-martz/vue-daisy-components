@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyDrawerProps } from '../interfaces/DaisyDrawerProps'
+import type { DaisyDrawerProps } from "../interfaces/DaisyDrawerProps";
+
 const { className } = withDefaults(defineProps<DaisyDrawerProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['drawer', className]">

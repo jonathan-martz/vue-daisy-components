@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyKbdProps } from '../interfaces/DaisyKbdProps'
+import type { DaisyKbdProps } from "../interfaces/DaisyKbdProps";
+
 const { className } = withDefaults(defineProps<DaisyKbdProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['kbd', className]">

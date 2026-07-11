@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyTooltipProps } from '../interfaces/DaisyTooltipProps'
+import type { DaisyTooltipProps } from "../interfaces/DaisyTooltipProps";
+
 const { className } = withDefaults(defineProps<DaisyTooltipProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['tooltip', className]">

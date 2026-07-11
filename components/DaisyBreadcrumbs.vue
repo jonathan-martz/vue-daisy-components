@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyBreadcrumbsProps } from '../interfaces/DaisyBreadcrumbsProps'
+import type { DaisyBreadcrumbsProps } from "../interfaces/DaisyBreadcrumbsProps";
+
 const { className } = withDefaults(defineProps<DaisyBreadcrumbsProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['breadcrumbs text-sm', className]">

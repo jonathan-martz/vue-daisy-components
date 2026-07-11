@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyToastProps } from '../interfaces/DaisyToastProps'
+import type { DaisyToastProps } from "../interfaces/DaisyToastProps";
+
 const { className } = withDefaults(defineProps<DaisyToastProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['toast', className]">

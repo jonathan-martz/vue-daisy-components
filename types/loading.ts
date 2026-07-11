@@ -1,1 +1,1 @@
-export type { DaisyLoadingProps } from '../interfaces/DaisyLoadingProps'
+export type { DaisyLoadingProps } from "../interfaces/DaisyLoadingProps";

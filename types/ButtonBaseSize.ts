@@ -1,1 +1,1 @@
-export type ButtonBaseSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type ButtonBaseSize = "xs" | "sm" | "md" | "lg" | "xl";

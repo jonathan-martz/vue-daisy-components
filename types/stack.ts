@@ -1,1 +1,1 @@
-export type { DaisyStackProps } from '../interfaces/DaisyStackProps'
+export type { DaisyStackProps } from "../interfaces/DaisyStackProps";

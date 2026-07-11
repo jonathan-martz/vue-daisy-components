@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyStackProps } from '../interfaces/DaisyStackProps'
+import type { DaisyStackProps } from "../interfaces/DaisyStackProps";
+
 const { className } = withDefaults(defineProps<DaisyStackProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['stack', className]">

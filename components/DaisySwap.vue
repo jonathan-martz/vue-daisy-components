@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisySwapProps } from '../interfaces/DaisySwapProps'
+import type { DaisySwapProps } from "../interfaces/DaisySwapProps";
+
 const { className } = withDefaults(defineProps<DaisySwapProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['swap', className]">

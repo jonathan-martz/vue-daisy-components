@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyChatProps } from '../interfaces/DaisyChatProps'
+import type { DaisyChatProps } from "../interfaces/DaisyChatProps";
+
 const { className } = withDefaults(defineProps<DaisyChatProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['chat chat-start', className]">

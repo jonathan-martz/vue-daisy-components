@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faChevronRight, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
-import type { DaisyCollapseProps } from '../interfaces/DaisyCollapseProps'
-const {
-  className,
-} = withDefaults(defineProps<DaisyCollapseProps>(), {
-  className: '',
-})
-const isOpen = ref(false)
+import {
+	faChevronRight,
+	faMinus,
+	faPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { ref } from "vue";
+import type { DaisyCollapseProps } from "../interfaces/DaisyCollapseProps";
+
+const { className } = withDefaults(defineProps<DaisyCollapseProps>(), {
+	className: "",
+});
+const isOpen = ref(false);
 </script>
 <template>
   <div class="collapse bg-base-200" :class="className">

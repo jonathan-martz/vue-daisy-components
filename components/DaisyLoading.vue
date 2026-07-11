@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyLoadingProps } from '../interfaces/DaisyLoadingProps'
+import type { DaisyLoadingProps } from "../interfaces/DaisyLoadingProps";
+
 const { className } = withDefaults(defineProps<DaisyLoadingProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <span :class="['loading loading-spinner', className]" />

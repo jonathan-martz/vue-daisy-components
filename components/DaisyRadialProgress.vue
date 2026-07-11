@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyRadialProgressProps } from '../interfaces/DaisyRadialProgressProps'
+import type { DaisyRadialProgressProps } from "../interfaces/DaisyRadialProgressProps";
+
 const { className } = withDefaults(defineProps<DaisyRadialProgressProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['radial-progress text-primary', className]">

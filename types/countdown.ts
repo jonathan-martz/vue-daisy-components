@@ -1,1 +1,1 @@
-export type { DaisyCountdownProps } from '../interfaces/DaisyCountdownProps'
+export type { DaisyCountdownProps } from "../interfaces/DaisyCountdownProps";

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyThemeControllerProps } from '../interfaces/DaisyThemeControllerProps'
+import type { DaisyThemeControllerProps } from "../interfaces/DaisyThemeControllerProps";
+
 const { className } = withDefaults(defineProps<DaisyThemeControllerProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <input type="checkbox" value="dark" :class="['toggle theme-controller', className]" />

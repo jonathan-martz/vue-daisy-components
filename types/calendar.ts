@@ -1,1 +1,1 @@
-export type { DaisyCalendarProps } from '../interfaces/DaisyCalendarProps'
+export type { DaisyCalendarProps } from "../interfaces/DaisyCalendarProps";

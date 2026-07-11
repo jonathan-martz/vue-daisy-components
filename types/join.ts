@@ -1,1 +1,1 @@
-export type { DaisyJoinProps } from '../interfaces/DaisyJoinProps'
+export type { DaisyJoinProps } from "../interfaces/DaisyJoinProps";

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyModalProps } from '../interfaces/DaisyModalProps'
+import type { DaisyModalProps } from "../interfaces/DaisyModalProps";
+
 const { className } = withDefaults(defineProps<DaisyModalProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['modal modal-open', className]">

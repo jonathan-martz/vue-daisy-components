@@ -1,3 +1,3 @@
-import type { Variant } from './Variant'
+import type { Variant } from "./Variant";
 
-export type BadgeVariant = Variant
+export type BadgeVariant = Variant;

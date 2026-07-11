@@ -1,1 +1,1 @@
-export type { DaisyLinkProps } from '../interfaces/DaisyLinkProps'
+export type { DaisyLinkProps } from "../interfaces/DaisyLinkProps";

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyJoinProps } from '../interfaces/DaisyJoinProps'
+import type { DaisyJoinProps } from "../interfaces/DaisyJoinProps";
+
 const { className } = withDefaults(defineProps<DaisyJoinProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['join', className]">

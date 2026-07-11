@@ -1,1 +1,1 @@
-export type { DaisyTimelineProps } from '../interfaces/DaisyTimelineProps'
+export type { DaisyTimelineProps } from "../interfaces/DaisyTimelineProps";

@@ -1,1 +1,1 @@
-export type { DaisyCheckboxProps } from '../interfaces/DaisyCheckboxProps'
+export type { DaisyCheckboxProps } from "../interfaces/DaisyCheckboxProps";

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyRatingProps } from '../interfaces/DaisyRatingProps'
+import type { DaisyRatingProps } from "../interfaces/DaisyRatingProps";
+
 const { className } = withDefaults(defineProps<DaisyRatingProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['rating', className]">

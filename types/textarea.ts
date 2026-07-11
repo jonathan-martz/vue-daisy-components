@@ -1,1 +1,1 @@
-export type { DaisyTextareaProps } from '../interfaces/DaisyTextareaProps'
+export type { DaisyTextareaProps } from "../interfaces/DaisyTextareaProps";

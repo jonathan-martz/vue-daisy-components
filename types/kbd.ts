@@ -1,1 +1,1 @@
-export type { DaisyKbdProps } from '../interfaces/DaisyKbdProps'
+export type { DaisyKbdProps } from "../interfaces/DaisyKbdProps";

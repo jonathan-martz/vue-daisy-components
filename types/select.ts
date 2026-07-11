@@ -1,1 +1,1 @@
-export type { DaisySelectProps } from '../interfaces/DaisySelectProps'
+export type { DaisySelectProps } from "../interfaces/DaisySelectProps";

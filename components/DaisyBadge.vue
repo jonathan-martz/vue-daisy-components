@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import type { DaisyBadgeProps } from '../types/badge'
+import { computed } from "vue";
+import type { DaisyBadgeProps } from "../types/badge";
 
 const props = withDefaults(defineProps<DaisyBadgeProps>(), {
-  className: '',
-  variant: 'neutral',
-  size: 'badge-md',
-  outline: false,
-})
+	className: "",
+	variant: "neutral",
+	size: "badge-md",
+	outline: false,
+});
 
-const variantClass = computed(() => `badge-${props.variant}`)
+const variantClass = computed(() => `badge-${props.variant}`);
 </script>
 
 <template>

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyDividerProps } from '../interfaces/DaisyDividerProps'
+import type { DaisyDividerProps } from "../interfaces/DaisyDividerProps";
+
 const { className } = withDefaults(defineProps<DaisyDividerProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['divider', className]">

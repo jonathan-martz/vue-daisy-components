@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import type { DaisyCardProps } from '../interfaces/DaisyCardProps'
+import { computed } from "vue";
+import type { DaisyCardProps } from "../interfaces/DaisyCardProps";
 
 const props = withDefaults(defineProps<DaisyCardProps>(), {
-  className: '',
-  imageFull: false,
-  bordered: false,
-  compact: false,
-  side: false,
-  actions: () => [],
-})
+	className: "",
+	imageFull: false,
+	bordered: false,
+	compact: false,
+	side: false,
+	actions: () => [],
+});
 
-const badgeVariantClass = computed(() => `badge-${props.badgeVariant ?? 'primary'}`)
+const badgeVariantClass = computed(
+	() => `badge-${props.badgeVariant ?? "primary"}`,
+);
 </script>
 
 <template>

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyTimelineProps } from '../interfaces/DaisyTimelineProps'
+import type { DaisyTimelineProps } from "../interfaces/DaisyTimelineProps";
+
 const { className } = withDefaults(defineProps<DaisyTimelineProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['timeline timeline-vertical', className]">

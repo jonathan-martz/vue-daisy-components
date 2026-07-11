@@ -1,1 +1,1 @@
-export type { DaisyToastProps } from '../interfaces/DaisyToastProps'
+export type { DaisyToastProps } from "../interfaces/DaisyToastProps";

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyRadioProps } from '../interfaces/DaisyRadioProps'
+import type { DaisyRadioProps } from "../interfaces/DaisyRadioProps";
+
 const { className } = withDefaults(defineProps<DaisyRadioProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <input type="radio" :class="['radio', className]" />

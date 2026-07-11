@@ -1,3 +1,3 @@
-import type { ButtonBaseSize } from './ButtonBaseSize'
+import type { ButtonBaseSize } from "./ButtonBaseSize";
 
-export type ButtonSize = ButtonBaseSize
+export type ButtonSize = ButtonBaseSize;

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyTableProps } from '../interfaces/DaisyTableProps'
+import type { DaisyTableProps } from "../interfaces/DaisyTableProps";
+
 const { className } = withDefaults(defineProps<DaisyTableProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['table', className]">

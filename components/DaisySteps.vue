@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyStepsProps } from '../interfaces/DaisyStepsProps'
+import type { DaisyStepsProps } from "../interfaces/DaisyStepsProps";
+
 const { className } = withDefaults(defineProps<DaisyStepsProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['steps w-full', className]">

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyDiffProps } from '../interfaces/DaisyDiffProps'
+import type { DaisyDiffProps } from "../interfaces/DaisyDiffProps";
+
 const { className } = withDefaults(defineProps<DaisyDiffProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['diff', className]">

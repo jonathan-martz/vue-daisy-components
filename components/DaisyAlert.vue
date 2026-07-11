@@ -1,25 +1,31 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCircleInfo, faCircleCheck, faTriangleExclamation, faCircleXmark, faXmark } from '@fortawesome/free-solid-svg-icons'
-import type { DaisyAlertProps } from '../interfaces/DaisyAlertProps'
+import {
+	faCircleCheck,
+	faCircleInfo,
+	faCircleXmark,
+	faTriangleExclamation,
+	faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { computed, ref } from "vue";
+import type { DaisyAlertProps } from "../interfaces/DaisyAlertProps";
 
 const props = withDefaults(defineProps<DaisyAlertProps>(), {
-  className: '',
-  variant: 'info',
-  dismissible: false,
-})
+	className: "",
+	variant: "info",
+	dismissible: false,
+});
 
-const isVisible = ref(true)
+const isVisible = ref(true);
 
-const variantClass = computed(() => `alert-${props.variant}`)
+const variantClass = computed(() => `alert-${props.variant}`);
 
 const icon = computed(() => {
-  if (props.variant === 'success') return faCircleCheck
-  if (props.variant === 'warning') return faTriangleExclamation
-  if (props.variant === 'error') return faCircleXmark
-  return faCircleInfo
-})
+	if (props.variant === "success") return faCircleCheck;
+	if (props.variant === "warning") return faTriangleExclamation;
+	if (props.variant === "error") return faCircleXmark;
+	return faCircleInfo;
+});
 </script>
 
 <template>

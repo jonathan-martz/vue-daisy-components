@@ -1,3 +1,3 @@
-import type { Variant } from './Variant'
+import type { Variant } from "./Variant";
 
-export type CardActionVariant = Variant
+export type CardActionVariant = Variant;

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisySelectProps } from '../interfaces/DaisySelectProps'
+import type { DaisySelectProps } from "../interfaces/DaisySelectProps";
+
 const { className } = withDefaults(defineProps<DaisySelectProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <select :class="['select select-bordered', className]">

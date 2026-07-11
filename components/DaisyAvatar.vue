@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyAvatarProps } from '../interfaces/DaisyAvatarProps'
+import type { DaisyAvatarProps } from "../interfaces/DaisyAvatarProps";
+
 const { className } = withDefaults(defineProps<DaisyAvatarProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['avatar', className]">

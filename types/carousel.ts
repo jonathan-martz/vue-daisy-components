@@ -1,1 +1,1 @@
-export type { DaisyCarouselProps } from '../interfaces/DaisyCarouselProps'
+export type { DaisyCarouselProps } from "../interfaces/DaisyCarouselProps";

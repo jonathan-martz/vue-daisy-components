@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyArtboardProps } from '../interfaces/DaisyArtboardProps'
+import type { DaisyArtboardProps } from "../interfaces/DaisyArtboardProps";
+
 const { className } = withDefaults(defineProps<DaisyArtboardProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['artboard artboard-horizontal phone-1', className]">

@@ -1,1 +1,1 @@
-export type { DaisyAccordionProps } from '../interfaces/DaisyAccordionProps'
+export type { DaisyAccordionProps } from "../interfaces/DaisyAccordionProps";

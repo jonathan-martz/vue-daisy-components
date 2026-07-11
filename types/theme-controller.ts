@@ -1,1 +1,1 @@
-export type { DaisyThemeControllerProps } from '../interfaces/DaisyThemeControllerProps'
+export type { DaisyThemeControllerProps } from "../interfaces/DaisyThemeControllerProps";

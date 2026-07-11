@@ -1,1 +1,1 @@
-export type { DaisyCollapseProps } from '../interfaces/DaisyCollapseProps'
+export type { DaisyCollapseProps } from "../interfaces/DaisyCollapseProps";

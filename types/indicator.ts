@@ -1,1 +1,1 @@
-export type { DaisyIndicatorProps } from '../interfaces/DaisyIndicatorProps'
+export type { DaisyIndicatorProps } from "../interfaces/DaisyIndicatorProps";

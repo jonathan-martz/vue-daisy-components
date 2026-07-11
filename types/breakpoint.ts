@@ -1,1 +1,1 @@
-export type { Breakpoint } from './Breakpoint'
+export type { Breakpoint } from "./Breakpoint";

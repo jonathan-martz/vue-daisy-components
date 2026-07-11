@@ -1,1 +1,1 @@
-export type { DaisyToggleProps } from '../interfaces/DaisyToggleProps'
+export type { DaisyToggleProps } from "../interfaces/DaisyToggleProps";

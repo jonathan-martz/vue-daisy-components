@@ -1,1 +1,1 @@
-export type { DaisySkeletonProps } from '../interfaces/DaisySkeletonProps'
+export type { DaisySkeletonProps } from "../interfaces/DaisySkeletonProps";

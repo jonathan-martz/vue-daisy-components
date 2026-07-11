@@ -1,1 +1,1 @@
-export type { DaisyDropdownProps } from '../interfaces/DaisyDropdownProps'
+export type { DaisyDropdownProps } from "../interfaces/DaisyDropdownProps";

@@ -1,1 +1,1 @@
-export type { DaisyFileInputProps } from '../interfaces/DaisyFileInputProps'
+export type { DaisyFileInputProps } from "../interfaces/DaisyFileInputProps";

@@ -1,31 +1,31 @@
 {
-  "name": "vue-daisyui-components",
-  "version": "0.0.6",
-  "description": "Vue Daisyui Components by MkaY",
-  "keywords": [
-    "vue",
-    "daisyui",
-    "components",
-    "jmse"
-  ],
-  "homepage": "https://github.com/jonathan-martz/vue-daisy-components#readme",
-  "bugs": {
-    "url": "https://github.com/jonathan-martz/vue-daisy-components/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonathan-martz/vue-daisy-components.git"
-  },
-  "license": "MIT",
-  "author": "Jonathan Martz",
-  "type": "module",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^7.3.0",
-    "@fortawesome/free-brands-svg-icons": "^7.3.0",
-    "@fortawesome/free-regular-svg-icons": "^7.3.0",
-    "@fortawesome/free-solid-svg-icons": "^7.3.0",
-    "@fortawesome/vue-fontawesome": "^3.3.1",
-    "daisyui": "^5.6.16",
-    "tailwindcss": "^4.3.2"
-  }
+	"name": "vue-daisyui-components",
+	"version": "0.0.6",
+	"description": "Vue Daisyui Components by MkaY",
+	"keywords": [
+		"vue",
+		"daisyui",
+		"components",
+		"jmse"
+	],
+	"homepage": "https://github.com/jonathan-martz/vue-daisy-components#readme",
+	"bugs": {
+		"url": "https://github.com/jonathan-martz/vue-daisy-components/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jonathan-martz/vue-daisy-components.git"
+	},
+	"license": "MIT",
+	"author": "Jonathan Martz",
+	"type": "module",
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^7.3.0",
+		"@fortawesome/free-brands-svg-icons": "^7.3.0",
+		"@fortawesome/free-regular-svg-icons": "^7.3.0",
+		"@fortawesome/free-solid-svg-icons": "^7.3.0",
+		"@fortawesome/vue-fontawesome": "^3.3.1",
+		"daisyui": "^5.6.16",
+		"tailwindcss": "^4.3.2"
+	}
 }

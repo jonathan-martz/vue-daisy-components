@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { DaisyIndicatorProps } from '../interfaces/DaisyIndicatorProps'
+import type { DaisyIndicatorProps } from "../interfaces/DaisyIndicatorProps";
+
 const { className } = withDefaults(defineProps<DaisyIndicatorProps>(), {
-  className: '',
-})
+	className: "",
+});
 </script>
 <template>
   <div :class="['indicator', className]">

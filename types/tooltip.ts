@@ -1,1 +1,1 @@
-export type { DaisyTooltipProps } from '../interfaces/DaisyTooltipProps'
+export type { DaisyTooltipProps } from "../interfaces/DaisyTooltipProps";
