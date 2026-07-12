@@ -1,6 +1,7 @@
 # Vue Daisy Components
 
-DaisyUI Komponenten mit Vue 3 `<script setup lang="ts">`, TailwindCSS und FontAwesome.
+DaisyUI Komponenten mit Vue 3 `<script setup lang="ts">`,
+TailwindCSS und FontAwesome. [WIP]
 
 ## Struktur
 
@@ -15,7 +16,6 @@ DaisyUI Komponenten mit Vue 3 `<script setup lang="ts">`, TailwindCSS und FontAw
 <template>
   <DaisyButton
     variant="primary"
-    :responsive-size="{ md: 'md', lg: 'lg' }"
   >
     Primary Button
   </DaisyButton>
