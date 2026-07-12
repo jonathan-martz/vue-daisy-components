@@ -1,5 +1,6 @@
 <template>
-  <section class="headline flex justify-between items-center">
+  <section class="headline flex justify-between items-center"
+  :class="!props.margin ?? 'mb-3'">
     <h2 class="font-bold text-lg">
       <slot/>
     </h2>
