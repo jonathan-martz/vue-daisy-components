@@ -64,7 +64,7 @@ const heroStyles = computed(() => {
 
 <template>
   <div
-      class="hero py-12 bg-gray-400"
+      class="hero py-12 bg-gray-300"
       :style="heroStyles"
   >
     <div v-if="bgImage" class="hero-overlay bg-opacity-60"></div>
