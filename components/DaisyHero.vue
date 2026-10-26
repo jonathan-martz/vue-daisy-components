@@ -107,7 +107,7 @@ const buttonClasses = computed(() => `btn-${props.variant}`);
         </h1>
 
         <p
-            class="py-6"
+            class="py-3"
             :class="[props.descriptionSize && textSizeClasses[props.descriptionSize], { 'text-neutral-content': props.bgImage }]"
         >
           {{ props.description }}
