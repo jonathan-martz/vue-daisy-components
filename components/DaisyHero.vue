@@ -84,7 +84,10 @@ const buttonClasses = computed(() => `btn-${props.variant}`);
           :alt="props.imageAlt"
       />
 
-      <div :class="{ 'max-w-md': props.layout === 'center' || props.bgImage }">
+      <div
+          class="prose prose-daisy"
+          :class="props.layout === 'center' || props.bgImage ? 'max-w-md' : 'max-w-none'"
+      >
         <h1
             class="text-5xl font-bold"
             :class="{ 'text-neutral-content': props.bgImage }"
@@ -99,15 +102,17 @@ const buttonClasses = computed(() => `btn-${props.variant}`);
           {{ props.description }}
         </p>
 
-        <slot name="actions">
-          <button
-              class="btn"
-              :class="buttonClasses"
-              @click="emit('cta-click')"
-          >
-            {{ props.ctaText }}
-          </button>
-        </slot>
+        <div class="not-prose">
+          <slot name="actions">
+            <button
+                class="btn"
+                :class="buttonClasses"
+                @click="emit('cta-click')"
+            >
+              {{ props.ctaText }}
+            </button>
+          </slot>
+        </div>
       </div>
     </div>
   </div>

@@ -76,9 +76,11 @@ const badgeVariantClass = computed(
         <span v-if="props.badge" class="badge" :class="badgeVariantClass">{{ props.badge }}</span>
       </div>
 
-      <slot>
-        <p v-if="props.description" class="text-base-content/70">{{ props.description }}</p>
-      </slot>
+      <div v-if="$slots.default || props.description" class="prose prose-daisy max-w-none">
+        <slot>
+          <p v-if="props.description" class="text-base-content/70">{{ props.description }}</p>
+        </slot>
+      </div>
 
       <div v-if="(props.actions && props.actions.length > 0) || $slots.actions" class="card-actions justify-end mt-2">
         <slot name="actions">

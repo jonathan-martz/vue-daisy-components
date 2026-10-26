@@ -26,7 +26,9 @@ const isOpen = ref(false);
       <slot name="title">Collapse</slot>
     </div>
     <div class="collapse-content">
-      <slot />
+      <div class="prose prose-daisy max-w-none">
+        <slot />
+      </div>
     </div>
   </div>
 </template>

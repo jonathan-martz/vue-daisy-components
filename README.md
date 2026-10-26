@@ -18,6 +18,25 @@ Dateisystem aufgeloest werden.
 Der Regressionstest fuer die Kompilierung ohne `fs`-Adapter laesst sich mit
 `node --test tests/runtime-props.test.mjs` ausfuehren.
 
+## Tailwind CSS und Typography
+
+Importiere die CSS-Datei einmal in deiner Anwendung und verarbeite sie mit deiner
+Tailwind-CSS-4-Integration:
+
+```css
+@import "vue-daisyui-components/styles.css";
+```
+
+Sie aktiviert daisyUI und `@tailwindcss/typography` und registriert die
+Komponenten als Tailwind-Quellen. Verwende diesen Import statt separater
+Tailwind-/daisyUI-Plugin-Imports, um doppelte Styles zu vermeiden.
+
+Hero, Card, Accordion und Collapse verwenden `prose` in ihren Inhaltsbereichen.
+`prose-daisy` passt die Textfarben an das aktive daisyUI-Theme an. Eigene
+Bedienelemente innerhalb dieser Inhalts-Slots sollten mit `not-prose`
+umschlossen werden. Hero-Aktionen und Card-Aktionen liegen bereits ausserhalb
+der Typography-Stile.
+
 ## Beispiel (Nuxt)
 
 ```vue
@@ -34,7 +53,7 @@ Der Regressionstest fuer die Kompilierung ohne `fs`-Adapter laesst sich mit
 
 ```vue
 <script setup lang="ts">
-import DaisyHero from "./components/DaisyHero.vue";
+import DaisyHero from "vue-daisyui-components/components/DaisyHero.vue";
 
 const handleCtaClick = () => {
 	console.log("Hero CTA clicked");

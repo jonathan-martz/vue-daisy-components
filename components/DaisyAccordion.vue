@@ -25,7 +25,9 @@ const props = defineProps({
       class="collapse collapse-arrow border border-base-300"
     >
       <summary class="collapse-title font-semibold">{{ item.title }}</summary>
-      <div class="collapse-content text-sm">{{ item.content }}</div>
+      <div class="collapse-content">
+        <div class="prose prose-sm prose-daisy max-w-none">{{ item.content }}</div>
+      </div>
     </details>
     <slot v-if="props.items.length === 0" />
   </div>
