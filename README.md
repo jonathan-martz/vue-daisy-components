@@ -51,6 +51,23 @@ der Typography-Stile.
 
 ## DaisyHero
 
+Textgroessen akzeptieren Tailwind-Namen ohne `text-`-Praefix: `xs`, `sm`,
+`base`, `lg`, `xl`, `2xl` bis `9xl`. Ohne Angabe bleibt die bisherige Groesse
+erhalten.
+
+| Komponenten | Props |
+| --- | --- |
+| DaisyHero, DaisyCard | `titleSize`, `descriptionSize`, `actionSize` |
+| DaisyAccordion, DaisyCollapse | `titleSize`, `descriptionSize` |
+| DaisyAlert | `titleSize`, `messageSize`, `closeSize` |
+| DaisyHeadline | `titleSize` |
+| DaisyLabel, DaisyDivider, DaisyBadge | `labelSize` |
+| DaisyModal | `closeSize` |
+| DaisyButton | `textSize` |
+
+Die Props stylen die eingebauten Textbereiche bzw. deren Slot-Container.
+Eigene Elemente mit expliziten Schriftgroessen in Slots behalten ihre Groesse.
+
 ```vue
 <script setup lang="ts">
 import DaisyHero from "vue-daisyui-components/components/DaisyHero.vue";
@@ -63,7 +80,9 @@ const handleCtaClick = () => {
 <template>
 	<DaisyHero
 		title="Build something great"
+		title-size="4xl"
 		description="A responsive hero section styled with daisyUI and Tailwind CSS."
+		description-size="lg"
 		cta-text="Get started"
 		image-url="/images/hero.webp"
 		image-alt="A preview of the product"

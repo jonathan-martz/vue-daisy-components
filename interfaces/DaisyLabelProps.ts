@@ -1,6 +1,8 @@
+import type { TextSize } from "../types/TextSize";
 import type { ClassName } from "./ClassName";
 
 export interface DaisyLabelProps extends ClassName {
+	labelSize?: TextSize;
 	modelValue: string | number;
 	label: string;
 	variant?: "default" | "floating";

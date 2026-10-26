@@ -1,9 +1,20 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyCardProps } from "../interfaces/DaisyCardProps";
 
 const props = defineProps({
+	titleSize: {
+		type: String as PropType<TextSize>,
+	},
+	descriptionSize: {
+		type: String as PropType<TextSize>,
+	},
+	actionSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -72,11 +83,11 @@ const badgeVariantClass = computed(
 
     <div class="card-body">
       <div v-if="props.title || props.badge" class="flex items-center justify-between gap-2">
-        <h2 v-if="props.title" class="card-title">{{ props.title }}</h2>
+        <h2 v-if="props.title" class="card-title" :class="props.titleSize && textSizeClasses[props.titleSize]">{{ props.title }}</h2>
         <span v-if="props.badge" class="badge" :class="badgeVariantClass">{{ props.badge }}</span>
       </div>
 
-      <div v-if="$slots.default || props.description" class="prose prose-daisy max-w-none">
+      <div v-if="$slots.default || props.description" class="prose prose-daisy max-w-none" :class="props.descriptionSize && textSizeClasses[props.descriptionSize]">
         <slot>
           <p v-if="props.description" class="text-base-content/70">{{ props.description }}</p>
         </slot>
@@ -89,7 +100,7 @@ const badgeVariantClass = computed(
             :key="index"
             type="button"
             class="btn"
-            :class="`btn-${action.variant ?? 'primary'}`"
+            :class="[`btn-${action.variant ?? 'primary'}`, props.actionSize && textSizeClasses[props.actionSize]]"
             @click="action.onClick"
           >
             {{ action.label }}

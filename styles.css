@@ -2,6 +2,7 @@
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
 @source "./components";
+@source "./utils";
 
 @utility prose-daisy {
 	--tw-prose-body: var(--color-base-content);

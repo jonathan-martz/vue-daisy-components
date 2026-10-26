@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyButtonProps } from "../interfaces/DaisyButtonProps";
 
 const props = defineProps({
+	textSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -67,6 +72,7 @@ const buttonClasses = computed(() => {
 		props.className,
 		variantClass.value,
 		sizeClass.value,
+		props.textSize && textSizeClasses[props.textSize],
 		...responsiveSizeClasses.value,
 		{
 			"btn-outline": props.outline,

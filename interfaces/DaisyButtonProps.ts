@@ -1,9 +1,11 @@
+import type { TextSize } from "../types/TextSize";
 import type { ButtonResponsiveSizeMap } from "../types/ButtonResponsiveSizeMap";
 import type { ButtonSize } from "../types/ButtonSize";
 import type { ButtonVariant } from "../types/ButtonVariant";
 import type { ClassName } from "./ClassName";
 
 export interface DaisyButtonProps extends ClassName {
+	textSize?: TextSize;
 	variant?: ButtonVariant;
 	size?: ButtonSize;
 	responsiveSize?: ButtonResponsiveSizeMap;

@@ -1,9 +1,20 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import { computed } from "vue";
 import type { PropType } from "vue";
 import type { DaisyHeroProps } from "../interfaces/DaisyHeroProps";
 
 const props = defineProps({
+	titleSize: {
+		type: String as PropType<TextSize>,
+	},
+	descriptionSize: {
+		type: String as PropType<TextSize>,
+	},
+	actionSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -89,15 +100,15 @@ const buttonClasses = computed(() => `btn-${props.variant}`);
           :class="props.layout === 'center' || props.bgImage ? 'max-w-md' : 'max-w-none'"
       >
         <h1
-            class="text-5xl font-bold"
-            :class="{ 'text-neutral-content': props.bgImage }"
+            class="font-bold"
+            :class="[textSizeClasses[props.titleSize ?? '5xl'], { 'text-neutral-content': props.bgImage }]"
         >
           {{ props.title }}
         </h1>
 
         <p
             class="py-6"
-            :class="{ 'text-neutral-content': props.bgImage }"
+            :class="[props.descriptionSize && textSizeClasses[props.descriptionSize], { 'text-neutral-content': props.bgImage }]"
         >
           {{ props.description }}
         </p>
@@ -106,7 +117,7 @@ const buttonClasses = computed(() => `btn-${props.variant}`);
           <slot name="actions">
             <button
                 class="btn"
-                :class="buttonClasses"
+                :class="[buttonClasses, props.actionSize && textSizeClasses[props.actionSize]]"
                 @click="emit('cta-click')"
             >
               {{ props.ctaText }}

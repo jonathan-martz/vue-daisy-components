@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyBadgeProps } from "../interfaces/DaisyBadgeProps";
 
 const props = defineProps({
+	labelSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -44,6 +49,7 @@ const sizeClass = computed(() => `badge-${props.size}`);
       props.className,
       variantClass,
       sizeClass,
+      props.labelSize && textSizeClasses[props.labelSize],
       {
         'badge-outline': props.outline,
         'badge-soft': props.soft,

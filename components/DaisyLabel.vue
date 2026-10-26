@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyLabelProps } from "../interfaces/DaisyLabelProps";
 
 // Props mit Standardwerten (Defaults)
 const props = defineProps({
+	labelSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -71,7 +76,7 @@ const containerClasses = computed(() => {
 
 <template>
   <label v-if="variant === 'default'" :class="containerClasses">
-    <span class="label">{{ label }}</span>
+    <span class="label" :class="props.labelSize && textSizeClasses[props.labelSize]">{{ label }}</span>
     <input
         v-model="inputValue"
         :type="type"
@@ -89,6 +94,6 @@ const containerClasses = computed(() => {
         class="input w-full"
         :class="{ 'input-error': error }"
     />
-    <span>{{ label }}</span>
+    <span :class="props.labelSize && textSizeClasses[props.labelSize]">{{ label }}</span>
   </label>
 </template>

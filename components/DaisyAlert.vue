@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
 import {
 	faCircleCheck,
@@ -12,6 +14,15 @@ import { computed, ref } from "vue";
 import type { DaisyAlertProps } from "../interfaces/DaisyAlertProps";
 
 const props = defineProps({
+	titleSize: {
+		type: String as PropType<TextSize>,
+	},
+	messageSize: {
+		type: String as PropType<TextSize>,
+	},
+	closeSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -50,12 +61,14 @@ const icon = computed(() => {
       <FontAwesomeIcon :icon="icon" class="text-lg" />
     </slot>
     <div>
-      <p v-if="props.title" class="font-semibold">{{ props.title }}</p>
-      <slot>
-        <p v-if="props.message">{{ props.message }}</p>
-      </slot>
+      <p v-if="props.title" class="font-semibold" :class="props.titleSize && textSizeClasses[props.titleSize]">{{ props.title }}</p>
+      <div :class="props.messageSize && textSizeClasses[props.messageSize]">
+        <slot>
+          <p v-if="props.message">{{ props.message }}</p>
+        </slot>
+      </div>
     </div>
-    <button v-if="props.dismissible" type="button" class="btn btn-ghost btn-sm" @click="isVisible = false">
+    <button v-if="props.dismissible" type="button" class="btn btn-ghost btn-sm" :class="props.closeSize && textSizeClasses[props.closeSize]" aria-label="Close" @click="isVisible = false">
       <FontAwesomeIcon :icon="faXmark" />
     </button>
   </div>

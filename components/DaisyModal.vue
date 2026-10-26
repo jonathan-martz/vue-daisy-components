@@ -1,7 +1,13 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import { onMounted, ref, watch } from "vue";
 
 const props = defineProps({
+	closeSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -47,7 +53,7 @@ const close = () => {
       <slot />
       <form method="dialog" class="modal-action">
         <slot name="actions">
-          <button type="button" class="btn" @click="close">Close</button>
+          <button type="button" class="btn" :class="props.closeSize && textSizeClasses[props.closeSize]" @click="close">Close</button>
         </slot>
       </form>
     </div>

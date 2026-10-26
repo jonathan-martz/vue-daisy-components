@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyDividerProps } from "../interfaces/DaisyDividerProps";
 
 const props = defineProps({
+	labelSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -23,7 +28,7 @@ const orientationClass = computed(() =>
 </script>
 <template>
   <div
-    :class="['divider', orientationClass, props.className]"
+    :class="['divider', orientationClass, props.labelSize && textSizeClasses[props.labelSize], props.className]"
     role="separator"
     :aria-orientation="props.orientation"
   >

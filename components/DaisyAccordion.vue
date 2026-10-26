@@ -1,8 +1,16 @@
 <script setup lang="ts">
+import { textSizeClasses } from "../utils/textSizeClasses";
+import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
 import type { DaisyAccordionProps } from "../interfaces/DaisyAccordionProps";
 
 const props = defineProps({
+	titleSize: {
+		type: String as PropType<TextSize>,
+	},
+	descriptionSize: {
+		type: String as PropType<TextSize>,
+	},
 	className: {
 		type: String,
 		default: "",
@@ -24,9 +32,9 @@ const props = defineProps({
       :name="props.name"
       class="collapse collapse-arrow border border-base-300"
     >
-      <summary class="collapse-title font-semibold">{{ item.title }}</summary>
+      <summary class="collapse-title font-semibold" :class="props.titleSize && textSizeClasses[props.titleSize]">{{ item.title }}</summary>
       <div class="collapse-content">
-        <div class="prose prose-sm prose-daisy max-w-none">{{ item.content }}</div>
+        <div class="prose prose-sm prose-daisy max-w-none" :class="props.descriptionSize && textSizeClasses[props.descriptionSize]">{{ item.content }}</div>
       </div>
     </details>
     <slot v-if="props.items.length === 0" />
