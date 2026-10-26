@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import {
 	faCircleCheck,
 	faCircleInfo,
@@ -10,10 +11,25 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { computed, ref } from "vue";
 import type { DaisyAlertProps } from "../interfaces/DaisyAlertProps";
 
-const props = withDefaults(defineProps<DaisyAlertProps>(), {
-	className: "",
-	variant: "info",
-	dismissible: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	variant: {
+		type: String as PropType<NonNullable<DaisyAlertProps["variant"]>>,
+		default: "info",
+	},
+	title: {
+		type: String,
+	},
+	message: {
+		type: String,
+	},
+	dismissible: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const isVisible = ref(true);

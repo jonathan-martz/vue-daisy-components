@@ -1,15 +1,42 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyLabelProps } from "../interfaces/DaisyLabelProps";
 
 // Props mit Standardwerten (Defaults)
-const props = withDefaults(defineProps<DaisyLabelProps>(), {
-	className: "",
-	variant: "default",
-	type: "text",
-	placeholder: "",
-	disabled: false,
-	error: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: [String, Number] as PropType<NonNullable<DaisyLabelProps["modelValue"]>>,
+		required: true,
+	},
+	label: {
+		type: String,
+		required: true,
+	},
+	variant: {
+		type: String as PropType<NonNullable<DaisyLabelProps["variant"]>>,
+		default: "default",
+	},
+	type: {
+		type: String,
+		default: "text",
+	},
+	placeholder: {
+		type: String,
+		default: "",
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	error: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 // Emits für das v-model Binding

@@ -5,10 +5,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { ref } from "vue";
-import type { DaisyCollapseProps } from "../interfaces/DaisyCollapseProps";
 
-const { className } = withDefaults(defineProps<DaisyCollapseProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 const isOpen = ref(false);
 </script>

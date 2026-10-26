@@ -1,9 +1,19 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import type { DaisyAccordionProps } from "../interfaces/DaisyAccordionProps";
 
-const props = withDefaults(defineProps<DaisyAccordionProps>(), {
-	className: "",
-	items: () => [],
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	items: {
+		type: Array as PropType<NonNullable<DaisyAccordionProps["items"]>>,
+		default: () => [],
+	},
+	name: {
+		type: String,
+	},
 });
 </script>
 <template>

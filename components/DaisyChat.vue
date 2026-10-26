@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyChatProps } from "../interfaces/DaisyChatProps";
 
-const props = withDefaults(defineProps<DaisyChatProps>(), {
-	className: "",
-	position: "start",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	position: {
+		type: String as PropType<NonNullable<DaisyChatProps["position"]>>,
+		default: "start",
+	},
 });
 
 const positionClass = computed(() =>

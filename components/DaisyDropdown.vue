@@ -1,10 +1,20 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed, ref, watch } from "vue";
 import type { DaisyDropdownProps } from "../interfaces/DaisyDropdownProps";
 
-const props = withDefaults(defineProps<DaisyDropdownProps>(), {
-	className: "",
-	position: "bottom",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	position: {
+		type: String as PropType<NonNullable<DaisyDropdownProps["position"]>>,
+		default: "bottom",
+	},
+	open: {
+		type: Boolean,
+	},
 });
 
 const isOpen = ref(props.open ?? false);

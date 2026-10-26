@@ -1,10 +1,24 @@
 <script setup lang="ts">
-import type { DaisySelectProps } from "../interfaces/DaisySelectProps";
 
-const props = withDefaults(defineProps<DaisySelectProps>(), {
-	className: "",
-	disabled: false,
-	modelValue: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: String,
+		default: "",
+	},
+	name: {
+		type: String,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	required: {
+		type: Boolean,
+	},
 });
 
 const emit = defineEmits<{

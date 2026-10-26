@@ -1,10 +1,27 @@
 <script setup lang="ts">
-import type { DaisyFileInputProps } from "../interfaces/DaisyFileInputProps";
 
-const props = withDefaults(defineProps<DaisyFileInputProps>(), {
-	className: "",
-	disabled: false,
-	multiple: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	name: {
+		type: String,
+	},
+	accept: {
+		type: String,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	multiple: {
+		type: Boolean,
+		default: false,
+	},
+	required: {
+		type: Boolean,
+	},
 });
 </script>
 <template>

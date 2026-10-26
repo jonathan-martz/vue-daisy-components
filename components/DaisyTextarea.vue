@@ -1,11 +1,31 @@
 <script setup lang="ts">
-import type { DaisyTextareaProps } from "../interfaces/DaisyTextareaProps";
 
-const props = withDefaults(defineProps<DaisyTextareaProps>(), {
-	className: "",
-	disabled: false,
-	rows: 3,
-	modelValue: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: String,
+		default: "",
+	},
+	name: {
+		type: String,
+	},
+	placeholder: {
+		type: String,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	required: {
+		type: Boolean,
+	},
+	rows: {
+		type: Number,
+		default: 3,
+	},
 });
 
 const emit = defineEmits<{

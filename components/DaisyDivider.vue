@@ -1,10 +1,20 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyDividerProps } from "../interfaces/DaisyDividerProps";
 
-const props = withDefaults(defineProps<DaisyDividerProps>(), {
-	className: "",
-	orientation: "horizontal",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	orientation: {
+		type: String as PropType<NonNullable<DaisyDividerProps["orientation"]>>,
+		default: "horizontal",
+	},
+	label: {
+		type: String,
+	},
 });
 
 const orientationClass = computed(() =>

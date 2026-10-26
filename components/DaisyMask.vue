@@ -1,11 +1,21 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyMaskProps } from "../interfaces/DaisyMaskProps";
 
-const props = withDefaults(defineProps<DaisyMaskProps>(), {
-	className: "",
-	shape: "squircle",
-	size: "md",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	shape: {
+		type: String as PropType<NonNullable<DaisyMaskProps["shape"]>>,
+		default: "squircle",
+	},
+	size: {
+		type: String as PropType<NonNullable<DaisyMaskProps["size"]>>,
+		default: "md",
+	},
 });
 
 const shapeClass = computed(() => {

@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import type { DaisyCountdownProps } from "../interfaces/DaisyCountdownProps";
 
-const props = withDefaults(defineProps<DaisyCountdownProps>(), {
-	className: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	value: {
+		type: Number,
+	},
+	label: {
+		type: String,
+	},
 });
 
 const countdownValue = computed(() =>

@@ -1,9 +1,25 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import type { DaisyCheckboxProps } from "../interfaces/DaisyCheckboxProps";
 
-const props = withDefaults(defineProps<DaisyCheckboxProps>(), {
-	className: "",
-	disabled: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: Boolean,
+	},
+	name: {
+		type: String,
+	},
+	value: {
+		type: [String, Number] as PropType<NonNullable<DaisyCheckboxProps["value"]>>,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits<{

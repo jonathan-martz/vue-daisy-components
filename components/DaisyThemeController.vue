@@ -1,12 +1,31 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyThemeControllerProps } from "../interfaces/DaisyThemeControllerProps";
 
-const props = withDefaults(defineProps<DaisyThemeControllerProps>(), {
-	className: "",
-	type: "checkbox",
-	value: "dark",
-	disabled: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: [String, Boolean] as PropType<NonNullable<DaisyThemeControllerProps["modelValue"]>>,
+	},
+	type: {
+		type: String as PropType<NonNullable<DaisyThemeControllerProps["type"]>>,
+		default: "checkbox",
+	},
+	name: {
+		type: String,
+	},
+	value: {
+		type: String,
+		default: "dark",
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits<{

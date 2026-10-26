@@ -1,14 +1,51 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyCardProps } from "../interfaces/DaisyCardProps";
 
-const props = withDefaults(defineProps<DaisyCardProps>(), {
-	className: "",
-	imageFull: false,
-	bordered: false,
-	compact: false,
-	side: false,
-	actions: () => [],
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	title: {
+		type: String,
+	},
+	description: {
+		type: String,
+	},
+	image: {
+		type: String,
+	},
+	imageAlt: {
+		type: String,
+	},
+	imageFull: {
+		type: Boolean,
+		default: false,
+	},
+	bordered: {
+		type: Boolean,
+		default: false,
+	},
+	compact: {
+		type: Boolean,
+		default: false,
+	},
+	side: {
+		type: Boolean,
+		default: false,
+	},
+	actions: {
+		type: Array as PropType<NonNullable<DaisyCardProps["actions"]>>,
+		default: () => [],
+	},
+	badge: {
+		type: String,
+	},
+	badgeVariant: {
+		type: String as PropType<NonNullable<DaisyCardProps["badgeVariant"]>>,
+	},
 });
 
 const badgeVariantClass = computed(

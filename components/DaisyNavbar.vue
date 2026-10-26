@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisyNavbarProps } from "../interfaces/DaisyNavbarProps";
 
-const { className } = withDefaults(defineProps<DaisyNavbarProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import type { DaisyProgressProps } from "../interfaces/DaisyProgressProps";
 
-const props = withDefaults(defineProps<DaisyProgressProps>(), {
-	className: "",
-	max: 100,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	value: {
+		type: Number,
+	},
+	max: {
+		type: Number,
+		default: 100,
+	},
 });
 </script>
 <template>

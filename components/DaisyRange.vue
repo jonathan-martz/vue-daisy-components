@@ -1,12 +1,32 @@
 <script setup lang="ts">
-import type { DaisyRangeProps } from "../interfaces/DaisyRangeProps";
 
-const props = withDefaults(defineProps<DaisyRangeProps>(), {
-	className: "",
-	min: 0,
-	max: 100,
-	step: 1,
-	disabled: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: Number,
+	},
+	name: {
+		type: String,
+	},
+	min: {
+		type: Number,
+		default: 0,
+	},
+	max: {
+		type: Number,
+		default: 100,
+	},
+	step: {
+		type: Number,
+		default: 1,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits<{

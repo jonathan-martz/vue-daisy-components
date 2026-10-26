@@ -1,12 +1,25 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyArtboardProps } from "../interfaces/DaisyArtboardProps";
 
-const props = withDefaults(defineProps<DaisyArtboardProps>(), {
-	className: "",
-	orientation: "portrait",
-	size: "medium",
-	showNotch: true,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	orientation: {
+		type: String as PropType<NonNullable<DaisyArtboardProps["orientation"]>>,
+		default: "portrait",
+	},
+	size: {
+		type: String as PropType<NonNullable<DaisyArtboardProps["size"]>>,
+		default: "medium",
+	},
+	showNotch: {
+		type: Boolean,
+		default: true,
+	},
 });
 
 const deviceSizeClasses = computed(() => {

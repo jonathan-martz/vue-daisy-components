@@ -1,18 +1,46 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import type { PropType } from "vue";
 import type { DaisyHeroProps } from "../interfaces/DaisyHeroProps";
 
-const props = withDefaults(defineProps<DaisyHeroProps>(), {
-	className: "",
-	title: "Hello there",
-	description:
-		"Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
-	ctaText: "Get Started",
-	imageUrl: "",
-	imageAlt: "Hero Image",
-	layout: "center",
-	bgImage: "",
-	variant: "primary",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	title: {
+		type: String,
+		default: "Hello there",
+	},
+	description: {
+		type: String,
+		default:
+			"Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+	},
+	ctaText: {
+		type: String,
+		default: "Get Started",
+	},
+	imageUrl: {
+		type: String,
+		default: "",
+	},
+	imageAlt: {
+		type: String,
+		default: "Hero Image",
+	},
+	layout: {
+		type: String as PropType<NonNullable<DaisyHeroProps["layout"]>>,
+		default: "center",
+	},
+	bgImage: {
+		type: String,
+		default: "",
+	},
+	variant: {
+		type: String as PropType<NonNullable<DaisyHeroProps["variant"]>>,
+		default: "primary",
+	},
 });
 
 const emit = defineEmits<{

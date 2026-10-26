@@ -1,14 +1,43 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyRatingProps } from "../interfaces/DaisyRatingProps";
 
-const props = withDefaults(defineProps<DaisyRatingProps>(), {
-	className: "",
-	size: "md",
-	max: 5,
-	half: false,
-	allowClear: false,
-	disabled: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: Number,
+	},
+	name: {
+		type: String,
+		required: true,
+	},
+	label: {
+		type: String,
+	},
+	max: {
+		type: Number,
+		default: 5,
+	},
+	half: {
+		type: Boolean,
+		default: false,
+	},
+	allowClear: {
+		type: Boolean,
+		default: false,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	size: {
+		type: String as PropType<NonNullable<DaisyRatingProps["size"]>>,
+		default: "md",
+	},
 });
 
 const emit = defineEmits<{

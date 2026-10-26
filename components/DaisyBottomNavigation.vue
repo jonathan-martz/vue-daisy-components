@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisyBottomNavigationProps } from "../interfaces/DaisyBottomNavigationProps";
 
-const { className } = withDefaults(defineProps<DaisyBottomNavigationProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

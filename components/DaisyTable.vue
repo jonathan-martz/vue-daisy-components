@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisyTableProps } from "../interfaces/DaisyTableProps";
 
-const { className } = withDefaults(defineProps<DaisyTableProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

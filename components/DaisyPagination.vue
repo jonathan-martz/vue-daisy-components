@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisyPaginationProps } from "../interfaces/DaisyPaginationProps";
 
-const { className } = withDefaults(defineProps<DaisyPaginationProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

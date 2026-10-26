@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyIndicatorProps } from "../interfaces/DaisyIndicatorProps";
 
-const props = withDefaults(defineProps<DaisyIndicatorProps>(), {
-	className: "",
-	position: "top-end",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	position: {
+		type: String as PropType<NonNullable<DaisyIndicatorProps["position"]>>,
+		default: "top-end",
+	},
 });
 
 const positionClass = computed(() => {

@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisySkeletonProps } from "../interfaces/DaisySkeletonProps";
 
-const { className } = withDefaults(defineProps<DaisySkeletonProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

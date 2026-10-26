@@ -1,9 +1,28 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import type { DaisyAvatarProps } from "../interfaces/DaisyAvatarProps";
 
-const props = withDefaults(defineProps<DaisyAvatarProps>(), {
-	className: "",
-	placeholder: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	src: {
+		type: String,
+	},
+	alt: {
+		type: String,
+	},
+	initials: {
+		type: String,
+	},
+	status: {
+		type: String as PropType<NonNullable<DaisyAvatarProps["status"]>>,
+	},
+	placeholder: {
+		type: Boolean,
+		default: false,
+	},
 });
 </script>
 <template>

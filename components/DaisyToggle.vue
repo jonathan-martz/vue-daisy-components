@@ -1,11 +1,27 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyToggleProps } from "../interfaces/DaisyToggleProps";
 
-const props = withDefaults(defineProps<DaisyToggleProps>(), {
-	className: "",
-	disabled: false,
-	variant: "primary",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: Boolean,
+	},
+	name: {
+		type: String,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	variant: {
+		type: String as PropType<NonNullable<DaisyToggleProps["variant"]>>,
+		default: "primary",
+	},
 });
 
 const emit = defineEmits<{

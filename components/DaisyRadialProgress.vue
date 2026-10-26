@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import type { DaisyRadialProgressProps } from "../interfaces/DaisyRadialProgressProps";
 
-const props = withDefaults(defineProps<DaisyRadialProgressProps>(), {
-	className: "",
-	value: 0,
-	max: 100,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	value: {
+		type: Number,
+		default: 0,
+	},
+	max: {
+		type: Number,
+		default: 100,
+	},
 });
 
 const percentage = computed(() =>

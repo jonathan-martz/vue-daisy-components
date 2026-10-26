@@ -1,9 +1,24 @@
 <script setup lang="ts">
-import type { DaisyLinkProps } from "../interfaces/DaisyLinkProps";
 
-const props = withDefaults(defineProps<DaisyLinkProps>(), {
-	className: "",
-	underline: true,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	href: {
+		type: String,
+		required: true,
+	},
+	target: {
+		type: String,
+	},
+	rel: {
+		type: String,
+	},
+	underline: {
+		type: Boolean,
+		default: true,
+	},
 });
 </script>
 <template>

@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import type { DaisyCarouselProps } from "../interfaces/DaisyCarouselProps";
 
-const props = withDefaults(defineProps<DaisyCarouselProps>(), {
-	className: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	label: {
+		type: String,
+	},
 });
 </script>
 <template>

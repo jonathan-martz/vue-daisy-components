@@ -1,11 +1,21 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyLoadingProps } from "../interfaces/DaisyLoadingProps";
 
-const props = withDefaults(defineProps<DaisyLoadingProps>(), {
-	className: "",
-	variant: "spinner",
-	size: "md",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	variant: {
+		type: String as PropType<NonNullable<DaisyLoadingProps["variant"]>>,
+		default: "spinner",
+	},
+	size: {
+		type: String as PropType<NonNullable<DaisyLoadingProps["size"]>>,
+		default: "md",
+	},
 });
 
 const loadingClasses = computed(() => [

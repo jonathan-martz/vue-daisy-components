@@ -1,10 +1,24 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { ref, watch } from "vue";
 import type { DaisyDrawerProps } from "../interfaces/DaisyDrawerProps";
 
-const props = withDefaults(defineProps<DaisyDrawerProps>(), {
-	className: "",
-	side: "start",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	id: {
+		type: String,
+		required: true,
+	},
+	open: {
+		type: Boolean,
+	},
+	side: {
+		type: String as PropType<NonNullable<DaisyDrawerProps["side"]>>,
+		default: "start",
+	},
 });
 
 const internalOpen = ref(props.open ?? false);

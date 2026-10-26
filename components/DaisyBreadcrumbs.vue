@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisyBreadcrumbsProps } from "../interfaces/DaisyBreadcrumbsProps";
 
-const { className } = withDefaults(defineProps<DaisyBreadcrumbsProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

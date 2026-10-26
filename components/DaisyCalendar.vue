@@ -1,10 +1,30 @@
 <script setup lang="ts">
-import type { DaisyCalendarProps } from "../interfaces/DaisyCalendarProps";
 
-const props = withDefaults(defineProps<DaisyCalendarProps>(), {
-	className: "",
-	disabled: false,
-	modelValue: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: String,
+		default: "",
+	},
+	name: {
+		type: String,
+	},
+	min: {
+		type: String,
+	},
+	max: {
+		type: String,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	inputClassName: {
+		type: String,
+	},
 });
 
 const emit = defineEmits<{

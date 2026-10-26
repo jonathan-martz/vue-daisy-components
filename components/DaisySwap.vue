@@ -1,11 +1,24 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisySwapProps } from "../interfaces/DaisySwapProps";
 
-const props = withDefaults(defineProps<DaisySwapProps>(), {
-	className: "",
-	disabled: false,
-	effect: "rotate",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: Boolean,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	effect: {
+		type: String as PropType<NonNullable<DaisySwapProps["effect"]>>,
+		default: "rotate",
+	},
 });
 
 const emit = defineEmits<{

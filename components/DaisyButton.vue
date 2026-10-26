@@ -1,18 +1,55 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyButtonProps } from "../interfaces/DaisyButtonProps";
 
-const props = withDefaults(defineProps<DaisyButtonProps>(), {
-	className: "",
-	variant: "primary",
-	outline: false,
-	disabled: false,
-	loading: false,
-	block: false,
-	circle: false,
-	square: false,
-	active: false,
-	type: "button",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	variant: {
+		type: String as PropType<NonNullable<DaisyButtonProps["variant"]>>,
+		default: "primary",
+	},
+	size: {
+		type: String as PropType<NonNullable<DaisyButtonProps["size"]>>,
+	},
+	responsiveSize: {
+		type: Object as PropType<NonNullable<DaisyButtonProps["responsiveSize"]>>,
+	},
+	outline: {
+		type: Boolean,
+		default: false,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	loading: {
+		type: Boolean,
+		default: false,
+	},
+	block: {
+		type: Boolean,
+		default: false,
+	},
+	circle: {
+		type: Boolean,
+		default: false,
+	},
+	square: {
+		type: Boolean,
+		default: false,
+	},
+	active: {
+		type: Boolean,
+		default: false,
+	},
+	type: {
+		type: String as PropType<NonNullable<DaisyButtonProps["type"]>>,
+		default: "button",
+	},
 });
 
 const emit = defineEmits<{

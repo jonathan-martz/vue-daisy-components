@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyStepsProps } from "../interfaces/DaisyStepsProps";
 
-const props = withDefaults(defineProps<DaisyStepsProps>(), {
-	className: "",
-	orientation: "horizontal",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	orientation: {
+		type: String as PropType<NonNullable<DaisyStepsProps["orientation"]>>,
+		default: "horizontal",
+	},
 });
 
 const orientationClass = computed(() =>

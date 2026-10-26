@@ -12,10 +12,15 @@
   </section>
 </template>
 <script setup lang="ts">
-import type { DaisyHeadlineProps } from "../interfaces/DaisyHeadlineProps";
 
-const props = withDefaults(defineProps<DaisyHeadlineProps>(), {
-	className: "",
-	margin: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	margin: {
+		type: Boolean,
+		default: false,
+	},
 });
 </script>

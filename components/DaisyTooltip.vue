@@ -1,10 +1,21 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyTooltipProps } from "../interfaces/DaisyTooltipProps";
 
-const props = withDefaults(defineProps<DaisyTooltipProps>(), {
-	className: "",
-	position: "top",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	tip: {
+		type: String,
+		required: true,
+	},
+	position: {
+		type: String as PropType<NonNullable<DaisyTooltipProps["position"]>>,
+		default: "top",
+	},
 });
 
 const positionClass = computed(() => {

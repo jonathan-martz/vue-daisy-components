@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisyDiffProps } from "../interfaces/DaisyDiffProps";
 
-const props = withDefaults(defineProps<DaisyDiffProps>(), {
-	className: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

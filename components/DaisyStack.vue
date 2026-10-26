@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import type { DaisyStackProps } from "../interfaces/DaisyStackProps";
 
-const props = withDefaults(defineProps<DaisyStackProps>(), {
-	className: "",
-	widthClass: "",
-	heightClass: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	widthClass: {
+		type: String,
+		default: "",
+	},
+	heightClass: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>

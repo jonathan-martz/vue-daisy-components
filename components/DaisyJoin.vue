@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import type { DaisyJoinProps } from "../interfaces/DaisyJoinProps";
 
-const props = withDefaults(defineProps<DaisyJoinProps>(), {
-	className: "",
-	orientation: "horizontal",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	orientation: {
+		type: String as PropType<NonNullable<DaisyJoinProps["orientation"]>>,
+		default: "horizontal",
+	},
 });
 </script>
 <template>

@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyToastProps } from "../interfaces/DaisyToastProps";
 
-const props = withDefaults(defineProps<DaisyToastProps>(), {
-	className: "",
-	position: "bottom-end",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	position: {
+		type: String as PropType<NonNullable<DaisyToastProps["position"]>>,
+		default: "bottom-end",
+	},
 });
 
 const positionClass = computed(() => {

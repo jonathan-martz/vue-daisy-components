@@ -1,11 +1,21 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import { computed } from "vue";
 import type { DaisyMenuProps } from "../interfaces/DaisyMenuProps";
 
-const props = withDefaults(defineProps<DaisyMenuProps>(), {
-	className: "",
-	horizontal: false,
-	size: "md",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	horizontal: {
+		type: Boolean,
+		default: false,
+	},
+	size: {
+		type: String as PropType<NonNullable<DaisyMenuProps["size"]>>,
+		default: "md",
+	},
 });
 
 const sizeClass = computed(() => {

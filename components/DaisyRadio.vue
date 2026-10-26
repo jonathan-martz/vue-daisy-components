@@ -1,9 +1,27 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
 import type { DaisyRadioProps } from "../interfaces/DaisyRadioProps";
 
-const props = withDefaults(defineProps<DaisyRadioProps>(), {
-	className: "",
-	disabled: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: [String, Number] as PropType<NonNullable<DaisyRadioProps["modelValue"]>>,
+	},
+	value: {
+		type: [String, Number] as PropType<NonNullable<DaisyRadioProps["value"]>>,
+		required: true,
+	},
+	name: {
+		type: String,
+		required: true,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits<{

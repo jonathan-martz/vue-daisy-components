@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
-import type { DaisyModalProps } from "../interfaces/DaisyModalProps";
 
-const props = withDefaults(defineProps<DaisyModalProps>(), {
-	className: "",
-	open: false,
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	open: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits<{

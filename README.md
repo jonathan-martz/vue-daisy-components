@@ -11,6 +11,13 @@ jeweiligen daisyUI-Dokumentation steht in [components.md](./components.md).
 - `types/` enthaelt wiederverwendbare Type-Aliase und Variant-/Breakpoint-Typen
 - Kleine Dateien in `types/` exportieren Komponenten-Props fuer bestehende Importpfade erneut
 
+Die Komponenten verwenden Runtime-Props. Externe Interfaces bleiben fuer die
+TypeScript-Typisierung erhalten, muessen aber vom Vue-SFC-Compiler nicht ueber das
+Dateisystem aufgeloest werden.
+
+Der Regressionstest fuer die Kompilierung ohne `fs`-Adapter laesst sich mit
+`node --test tests/runtime-props.test.mjs` ausfuehren.
+
 ## Beispiel (Nuxt)
 
 ```vue

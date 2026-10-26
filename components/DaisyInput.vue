@@ -1,13 +1,39 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import type { DaisyInputProps } from "../interfaces/DaisyInputProps";
 
-const props = withDefaults(defineProps<DaisyInputProps>(), {
-	className: "",
-	type: "text",
-	disabled: false,
-	invalid: false,
-	modelValue: "",
+const props = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
+	modelValue: {
+		type: String,
+		default: "",
+	},
+	type: {
+		type: String,
+		default: "text",
+	},
+	name: {
+		type: String,
+	},
+	placeholder: {
+		type: String,
+	},
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
+	required: {
+		type: Boolean,
+	},
+	readonly: {
+		type: Boolean,
+	},
+	invalid: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits<{

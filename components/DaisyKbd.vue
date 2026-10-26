@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { DaisyKbdProps } from "../interfaces/DaisyKbdProps";
 
-const { className } = withDefaults(defineProps<DaisyKbdProps>(), {
-	className: "",
+const { className } = defineProps({
+	className: {
+		type: String,
+		default: "",
+	},
 });
 </script>
 <template>
