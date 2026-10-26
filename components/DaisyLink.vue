@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import type { DaisyLinkProps } from "../interfaces/DaisyLinkProps";
 
-const { className } = withDefaults(defineProps<DaisyLinkProps>(), {
+const props = withDefaults(defineProps<DaisyLinkProps>(), {
 	className: "",
+	underline: true,
 });
 </script>
 <template>
-  <div :class="['link', className]">
+  <a
+    :href="props.href"
+    :target="props.target"
+    :rel="props.rel"
+    :class="['link', { 'no-underline': !props.underline }, props.className]"
+  >
     <slot />
-  </div>
+  </a>
 </template>

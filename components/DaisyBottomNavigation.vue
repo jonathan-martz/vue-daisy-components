@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyBottomNavigationProps>(), {
 });
 </script>
 <template>
-  <div :class="['btm-nav', className]">
+  <nav aria-label="Bottom navigation" :class="['dock', className]">
     <slot />
-  </div>
+  </nav>
 </template>

@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyKbdProps>(), {
 });
 </script>
 <template>
-  <div :class="['kbd', className]">
+  <kbd :class="['kbd', className]">
     <slot />
-  </div>
+  </kbd>
 </template>

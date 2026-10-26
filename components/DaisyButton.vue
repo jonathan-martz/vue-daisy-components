@@ -1,14 +1,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import type { DaisyButtonProps } from "../interfaces/DaisyButtonProps";
-import type { ButtonResponsiveSizeMap } from "../types/ButtonResponsiveSizeMap";
-import type { ButtonSize } from "../types/ButtonSize";
-import type { ButtonVariant } from "../types/ButtonVariant";
 
 const props = withDefaults(defineProps<DaisyButtonProps>(), {
 	className: "",
-	variant: "primary" as ButtonVariant,
-	responsiveSize: () => ({ md: "md" as ButtonSize }),
+	variant: "primary",
 	outline: false,
 	disabled: false,
 	loading: false,
@@ -16,7 +12,6 @@ const props = withDefaults(defineProps<DaisyButtonProps>(), {
 	circle: false,
 	square: false,
 	active: false,
-	size: "",
 	type: "button",
 });
 
@@ -33,11 +28,9 @@ const sizeClass = computed(() =>
 const buttonClasses = computed(() => {
 	return [
 		props.className,
-		variantClass.value, // .value falls es refs/computeds sind
+		variantClass.value,
 		sizeClass.value,
-		...(Array.isArray(responsiveSizeClasses.value)
-			? responsiveSizeClasses.value
-			: []),
+		...responsiveSizeClasses.value,
 		{
 			"btn-outline": props.outline,
 			"btn-block": props.block,
@@ -49,13 +42,10 @@ const buttonClasses = computed(() => {
 });
 
 const responsiveSizeClasses = computed(() => {
-	if (!props.responsiveSize) return [];
-
 	const classes: string[] = [];
-	for (const breakpoint in props.responsiveSize) {
-		const currentSize =
-			props.responsiveSize[breakpoint as keyof ButtonResponsiveSizeMap];
-		if (currentSize) classes.push(`${breakpoint}:btn-${currentSize}`);
+	const sizes = props.responsiveSize ?? (props.size ? {} : { md: "md" as const });
+	for (const [breakpoint, size] of Object.entries(sizes)) {
+		if (size) classes.push(`${breakpoint}:btn-${size}`);
 	}
 
 	return classes;
@@ -67,6 +57,7 @@ const responsiveSizeClasses = computed(() => {
       class="btn"
       :class="buttonClasses"
       :disabled="props.disabled || props.loading"
+      :aria-busy="props.loading"
       :type="props.type"
       @click="emit('click', $event)"
   >

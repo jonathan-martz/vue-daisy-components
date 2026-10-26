@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyFooterProps>(), {
 });
 </script>
 <template>
-  <div :class="['footer p-4 bg-base-200 text-base-content', className]">
+  <footer :class="['footer p-4 bg-base-200 text-base-content', className]">
     <slot />
-  </div>
+  </footer>
 </template>

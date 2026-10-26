@@ -39,7 +39,7 @@ const icon = computed(() => {
         <p v-if="props.message">{{ props.message }}</p>
       </slot>
     </div>
-    <button v-if="props.dismissible" class="btn btn-ghost btn-sm" @click="isVisible = false">
+    <button v-if="props.dismissible" type="button" class="btn btn-ghost btn-sm" @click="isVisible = false">
       <FontAwesomeIcon :icon="faXmark" />
     </button>
   </div>

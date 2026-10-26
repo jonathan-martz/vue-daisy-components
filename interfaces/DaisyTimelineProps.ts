@@ -1,3 +1,5 @@
 import type { ClassName } from "./ClassName";
 
-export interface DaisyTimelineProps extends ClassName {}
+export interface DaisyTimelineProps extends ClassName {
+	orientation?: "horizontal" | "vertical";
+}

@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyTableProps>(), {
 });
 </script>
 <template>
-  <div :class="['table', className]">
+  <table :class="['table', className]">
     <slot />
-  </div>
+  </table>
 </template>

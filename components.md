@@ -1,52 +1,57 @@
-1. Accordion
-2. Alert
-3. Artboard
-4. Avatar
-5. Badge
-6. Bottom Navigation
-7. Breadcrumbs
-8. Button
-9. Calendar
-10. Card
-11. Carousel
-12. Chat
-13. Checkbox
-14. Collapse
-15. Countdown
-16. Diff
-17. Divider
-18. Drawer
-19. Dropdown
-20. File Input
-21. Footer
-22. Hero
-23. Indicator
-24. Input
-25. Join
-26. Kbd
-27. Link
-28. Loading
-29. Mask
-30. Menu
-31. Modal
-32. Navbar
-33. Pagination
-34. Progress
-35. Radial Progress
-36. Radio
-37. Range
-38. Rating
-39. Select
-40. Skeleton
-41. Stack
-42. Stat
-43. Steps
-44. Swap
-45. Table
-46. Tabs
-47. Textarea
-48. Theme Controller
-49. Timeline
-50. Toast
-51. Toggle
-52. Tooltip
+# Komponenten
+
+Jede Komponente verweist auf die passende daisyUI-Dokumentation. Die
+Implementierungen liegen unter `components/` und verwenden den Praefix `Daisy`.
+
+1. [Accordion](https://daisyui.com/components/accordion/)
+2. [Alert](https://daisyui.com/components/alert/)
+3. [Artboard (in daisyUI 5 entfernt; Tailwind-Geraeterahmen)](https://daisyui.com/docs/upgrade/)
+4. [Avatar](https://daisyui.com/components/avatar/)
+5. [Badge](https://daisyui.com/components/badge/)
+6. [Bottom Navigation (Dock)](https://daisyui.com/components/dock/) (auf iOS `viewport-fit=cover` im Viewport-Meta-Tag setzen)
+7. [Breadcrumbs](https://daisyui.com/components/breadcrumbs/)
+8. [Button](https://daisyui.com/components/button/)
+9. [Calendar](https://daisyui.com/components/calendar/) (stylt Kalenderbibliotheken oder den nativen Date-Input)
+10. [Card](https://daisyui.com/components/card/)
+11. [Carousel](https://daisyui.com/components/carousel/)
+12. [Chat](https://daisyui.com/components/chat/)
+13. [Checkbox](https://daisyui.com/components/checkbox/)
+14. [Collapse](https://daisyui.com/components/collapse/)
+15. [Countdown](https://daisyui.com/components/countdown/)
+16. [Diff](https://daisyui.com/components/diff/)
+17. [Divider](https://daisyui.com/components/divider/)
+18. [Drawer](https://daisyui.com/components/drawer/) (`id` muss pro Drawer eindeutig sein; Slots `content` und `sidebar`)
+19. [Dropdown](https://daisyui.com/components/dropdown/)
+20. [File Input](https://daisyui.com/components/file-input/)
+21. [Footer](https://daisyui.com/components/footer/)
+22. [Hero](https://daisyui.com/components/hero/)
+23. [Indicator](https://daisyui.com/components/indicator/)
+24. [Input](https://daisyui.com/components/input/)
+25. [Join](https://daisyui.com/components/join/)
+26. [Kbd](https://daisyui.com/components/kbd/)
+27. [Link](https://daisyui.com/components/link/)
+28. [Loading](https://daisyui.com/components/loading/)
+29. [Mask](https://daisyui.com/components/mask/)
+30. [Menu](https://daisyui.com/components/menu/)
+31. [Modal](https://daisyui.com/components/modal/)
+32. [Navbar](https://daisyui.com/components/navbar/)
+33. [Pagination](https://daisyui.com/components/pagination/)
+34. [Progress](https://daisyui.com/components/progress/)
+35. [Radial Progress](https://daisyui.com/components/radial-progress/)
+36. [Radio](https://daisyui.com/components/radio/)
+37. [Range](https://daisyui.com/components/range/)
+38. [Rating](https://daisyui.com/components/rating/) (benötigt einen eindeutigen Radio-Gruppennamen)
+39. [Select](https://daisyui.com/components/select/)
+40. [Skeleton](https://daisyui.com/components/skeleton/)
+41. [Stack](https://daisyui.com/components/stack/)
+42. [Stat](https://daisyui.com/components/stat/)
+43. [Steps](https://daisyui.com/components/steps/)
+44. [Swap](https://daisyui.com/components/swap/)
+45. [Table](https://daisyui.com/components/table/)
+46. [Tabs](https://daisyui.com/components/tab/)
+47. [Textarea](https://daisyui.com/components/textarea/)
+48. [Theme Controller](https://daisyui.com/components/theme-controller/)
+49. [Timeline](https://daisyui.com/components/timeline/)
+50. [Toast](https://daisyui.com/components/toast/)
+51. [Toggle](https://daisyui.com/components/toggle/)
+52. [Tooltip](https://daisyui.com/components/tooltip/)

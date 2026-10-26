@@ -1,19 +1,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
-
-// TypeScript Interfaces für die Props definieren
-interface Props {
-	modelValue: string | number;
-	label: string;
-	variant?: "default" | "floating";
-	type?: string;
-	placeholder?: string;
-	disabled?: boolean;
-	error?: boolean;
-}
+import type { DaisyLabelProps } from "../interfaces/DaisyLabelProps";
 
 // Props mit Standardwerten (Defaults)
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<DaisyLabelProps>(), {
+	className: "",
 	variant: "default",
 	type: "text",
 	placeholder: "",
@@ -34,12 +25,14 @@ const inputValue = computed({
 const containerClasses = computed(() => {
 	if (props.variant === "floating") {
 		return [
+			props.className,
 			"floating-label w-full",
 			{ "validator-error": props.error }, // Falls du DaisyUI Validierungs-Klassen nutzt
 		];
 	}
 
 	return [
+		props.className,
 		"input w-full", // Basis-Klasse für Inputs, die als Wrapper für Labels dienen
 		{
 			"input-error": props.error,

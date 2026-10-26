@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyPaginationProps>(), {
 });
 </script>
 <template>
-  <div :class="['join', className]">
+  <nav aria-label="Pagination" :class="['join', className]">
     <slot />
-  </div>
+  </nav>
 </template>

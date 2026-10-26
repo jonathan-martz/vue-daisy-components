@@ -1,3 +1,6 @@
 import type { ClassName } from "./ClassName";
 
-export interface DaisyStatProps extends ClassName {}
+export interface DaisyStatProps extends ClassName {
+	orientation?: "horizontal" | "vertical";
+	shadow?: boolean;
+}

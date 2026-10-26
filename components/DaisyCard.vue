@@ -22,7 +22,7 @@ const badgeVariantClass = computed(
     :class="[
       props.className,
       {
-        'card-bordered': props.bordered,
+        'card-border': props.bordered,
         'card-compact': props.compact,
         'card-side': props.side,
         'image-full': props.imageFull,
@@ -48,6 +48,7 @@ const badgeVariantClass = computed(
           <button
             v-for="(action, index) in props.actions"
             :key="index"
+            type="button"
             class="btn"
             :class="`btn-${action.variant ?? 'primary'}`"
             @click="action.onClick"

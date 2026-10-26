@@ -6,5 +6,7 @@ export interface DaisyBadgeProps extends ClassName {
 	variant?: BadgeVariant;
 	size?: BadgeSize;
 	outline?: boolean;
+	soft?: boolean;
+	dash?: boolean;
 	label?: string;
 }

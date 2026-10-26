@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyBreadcrumbsProps>(), {
 });
 </script>
 <template>
-  <div :class="['breadcrumbs text-sm', className]">
+  <nav aria-label="Breadcrumb" :class="['breadcrumbs text-sm', className]">
     <slot />
-  </div>
+  </nav>
 </template>

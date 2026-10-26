@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisySkeletonProps>(), {
 });
 </script>
 <template>
-  <div :class="['skeleton h-24 w-full', className]">
+  <div aria-hidden="true" :class="['skeleton h-24 w-full', className]">
     <slot />
   </div>
 </template>

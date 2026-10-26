@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyNavbarProps>(), {
 });
 </script>
 <template>
-  <div :class="['navbar bg-base-100 rounded-box shadow-sm', className]">
+  <nav :class="['navbar bg-base-100 rounded-box shadow-sm', className]">
     <slot />
-  </div>
+  </nav>
 </template>

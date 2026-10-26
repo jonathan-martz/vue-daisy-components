@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import type { DaisyCarouselProps } from "../interfaces/DaisyCarouselProps";
 
-const { className } = withDefaults(defineProps<DaisyCarouselProps>(), {
+const props = withDefaults(defineProps<DaisyCarouselProps>(), {
 	className: "",
 });
 </script>
 <template>
-  <div :class="['carousel rounded-box', className]">
+  <div
+    role="region"
+    :aria-label="props.label"
+    :class="['carousel rounded-box', props.className]"
+  >
     <slot />
   </div>
 </template>

@@ -6,7 +6,7 @@ const { className } = withDefaults(defineProps<DaisyTabsProps>(), {
 });
 </script>
 <template>
-  <div :class="['tabs tabs-boxed', className]">
+  <div :class="['tabs tabs-box', className]" role="tablist">
     <slot />
   </div>
 </template>

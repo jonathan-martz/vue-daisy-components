@@ -1,14 +1,27 @@
 <script setup lang="ts">
 import type { DaisySelectProps } from "../interfaces/DaisySelectProps";
 
-const { className } = withDefaults(defineProps<DaisySelectProps>(), {
+const props = withDefaults(defineProps<DaisySelectProps>(), {
 	className: "",
+	disabled: false,
+	modelValue: "",
 });
+
+const emit = defineEmits<{
+	"update:modelValue": [value: string];
+}>();
 </script>
 <template>
-  <select :class="['select select-bordered', className]">
+  <select
+    :name="props.name"
+    :value="props.modelValue"
+    :disabled="props.disabled"
+    :required="props.required"
+    :class="['select', props.className]"
+    @change="emit('update:modelValue', ($event.target as HTMLSelectElement).value)"
+  >
     <slot>
-      <option disabled selected>Choose</option>
+      <option disabled value="">Choose</option>
     </slot>
   </select>
 </template>

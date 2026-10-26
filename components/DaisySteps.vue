@@ -1,12 +1,18 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import type { DaisyStepsProps } from "../interfaces/DaisyStepsProps";
 
-const { className } = withDefaults(defineProps<DaisyStepsProps>(), {
+const props = withDefaults(defineProps<DaisyStepsProps>(), {
 	className: "",
+	orientation: "horizontal",
 });
+
+const orientationClass = computed(() =>
+	props.orientation === "vertical" ? "steps-vertical" : "steps-horizontal",
+);
 </script>
 <template>
-  <div :class="['steps w-full', className]">
+  <ul :class="['steps w-full', orientationClass, props.className]">
     <slot />
-  </div>
+  </ul>
 </template>
