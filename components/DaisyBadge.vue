@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import type { DaisyBadgeProps } from "../types/badge";
+import type { DaisyBadgeProps } from "../interfaces/DaisyBadgeProps";
 
 const props = withDefaults(defineProps<DaisyBadgeProps>(), {
 	className: "",

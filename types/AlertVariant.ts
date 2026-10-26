@@ -1,1 +1,6 @@
-export type AlertVariant = "info" | "success" | "warning" | "error";
+import type { Variant } from "./Variant";
+
+export type AlertVariant = Extract<
+	Variant,
+	"info" | "success" | "warning" | "error"
+>;

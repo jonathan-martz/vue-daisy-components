@@ -7,9 +7,9 @@ jeweiligen daisyUI-Dokumentation steht in [components.md](./components.md).
 ## Struktur
 
 - `components/` enthaelt alle Daisy-Komponenten als `Daisy*`
-- `interfaces/` enthaelt Interfaces
-- `types/` enthaelt Type-Aliase
-- `types/` enthaelt Re-Export-Dateien pro Komponente
+- `interfaces/` enthaelt Komponenten-Props und gemeinsam genutzte Interfaces
+- `types/` enthaelt wiederverwendbare Type-Aliase und Variant-/Breakpoint-Typen
+- Kleine Dateien in `types/` exportieren Komponenten-Props fuer bestehende Importpfade erneut
 
 ## Beispiel (Nuxt)
 

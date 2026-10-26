@@ -1,4 +1,7 @@
-export type BadgeVariant =
+import type { Variant } from "./Variant";
+
+export type BadgeVariant = Extract<
+	Variant,
 	| "primary"
 	| "secondary"
 	| "accent"
@@ -6,4 +9,5 @@ export type BadgeVariant =
 	| "info"
 	| "success"
 	| "warning"
-	| "error";
+	| "error"
+>;
