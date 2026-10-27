@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { badgeVariantClasses, buttonVariantClasses } from "../utils/variantClasses";
 import { textSizeClasses } from "../utils/textSizeClasses";
 import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
@@ -60,7 +61,7 @@ const props = defineProps({
 });
 
 const badgeVariantClass = computed(
-	() => `badge-${props.badgeVariant ?? "primary"}`,
+	() => badgeVariantClasses[props.badgeVariant ?? "primary"],
 );
 </script>
 
@@ -100,7 +101,7 @@ const badgeVariantClass = computed(
             :key="index"
             type="button"
             class="btn"
-            :class="[`btn-${action.variant ?? 'primary'}`, props.actionSize && textSizeClasses[props.actionSize]]"
+            :class="[buttonVariantClasses[action.variant ?? 'primary'], props.actionSize && textSizeClasses[props.actionSize]]"
             @click="action.onClick"
           >
             {{ action.label }}

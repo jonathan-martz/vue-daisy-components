@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { buttonVariantClasses } from "../utils/variantClasses";
 import { textSizeClasses } from "../utils/textSizeClasses";
 import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
@@ -61,7 +62,7 @@ const emit = defineEmits<{
 	click: [event: MouseEvent];
 }>();
 
-const variantClass = computed(() => `btn-${props.variant}`);
+const variantClass = computed(() => buttonVariantClasses[props.variant]);
 
 const sizeClass = computed(() =>
 	props.size ? `btn-${props.size}` : undefined,

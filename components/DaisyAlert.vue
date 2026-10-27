@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { alertVariantClasses } from "../utils/variantClasses";
 import { textSizeClasses } from "../utils/textSizeClasses";
 import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
@@ -45,7 +46,7 @@ const props = defineProps({
 
 const isVisible = ref(true);
 
-const variantClass = computed(() => `alert-${props.variant}`);
+const variantClass = computed(() => alertVariantClasses[props.variant]);
 
 const icon = computed(() => {
 	if (props.variant === "success") return faCircleCheck;

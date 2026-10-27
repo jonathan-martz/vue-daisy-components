@@ -39,6 +39,13 @@ der Typography-Stile.
 
 ## Beispiel (Nuxt)
 
+Farbvarianten werden ohne Klassenpraefix angegeben. Die Basisklasse bleibt
+erhalten: `DaisyAlert variant="warning"` rendert `alert alert-warning`,
+`DaisyButton variant="primary"` rendert `btn btn-primary` und
+`DaisyBadge variant="success"` rendert `badge badge-success`.
+Die vollstaendigen Farbklassen sind statisch hinterlegt, damit Tailwind sie
+auch beim Scannen der Bibliothek erkennt.
+
 ```vue
 <template>
   <DaisyButton

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { buttonVariantClasses } from "../utils/variantClasses";
 import { textSizeClasses } from "../utils/textSizeClasses";
 import type { TextSize } from "../types/TextSize";
 import { computed } from "vue";
@@ -76,7 +77,7 @@ const heroStyles = computed(() => {
 	return {};
 });
 
-const buttonClasses = computed(() => `btn-${props.variant}`);
+const buttonClasses = computed(() => buttonVariantClasses[props.variant]);
 </script>
 
 <template>

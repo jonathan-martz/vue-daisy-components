@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { badgeVariantClasses } from "../utils/variantClasses";
 import { textSizeClasses } from "../utils/textSizeClasses";
 import type { TextSize } from "../types/TextSize";
 import type { PropType } from "vue";
@@ -38,7 +39,7 @@ const props = defineProps({
 	},
 });
 
-const variantClass = computed(() => `badge-${props.variant}`);
+const variantClass = computed(() => badgeVariantClasses[props.variant]);
 const sizeClass = computed(() => `badge-${props.size}`);
 </script>
 
