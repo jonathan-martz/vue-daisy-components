@@ -1,3 +1,10 @@
-import type { TextSize } from "./TextSize";
-
-export type IconSize = TextSize | "1x";
+export type IconSize =
+	| "1x"
+	| "2x"
+	| "3x"
+	| "4x"
+	| "5x"
+	| "6x"
+	| "7x"
+	| "8x"
+	| "9x";

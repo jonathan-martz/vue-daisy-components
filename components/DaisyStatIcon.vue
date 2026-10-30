@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import type { PropType } from "vue";
 import type { DaisyStatIconProps } from "../interfaces/DaisyStatIconProps";
 import type { StatColor } from "../types/StatColor";
-import { textSizeClasses } from "../utils/textSizeClasses";
 
 const statColorClasses: Record<StatColor, string> = {
 	primary: "text-primary",
@@ -42,7 +41,7 @@ const props = defineProps({
     <FontAwesomeIcon
       :icon="props.icon"
       class="inline-block"
-      :class="props.size === '1x' ? 'text-base' : textSizeClasses[props.size]"
+      :size="props.size"
       aria-hidden="true"
     />
   </div>
