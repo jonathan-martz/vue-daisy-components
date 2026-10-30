@@ -103,3 +103,30 @@ const handleCtaClick = () => {
 
 Use the `actions` slot to provide custom CTA content. Set `bg-image` to use a
 background image with an overlay.
+
+`DaisyStat` accepts a `figure` slot for an icon or image. Use `DaisyStatIcon`
+with a Font Awesome icon definition, or `DaisyStatImage` with an image source:
+
+```vue
+<script setup lang="ts">
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import DaisyStat from "vue-daisyui-components/components/DaisyStat.vue";
+import DaisyStatIcon from "vue-daisyui-components/components/DaisyStatIcon.vue";
+import DaisyStatImage from "vue-daisyui-components/components/DaisyStatImage.vue";
+
+const downloadsIcon = faDownload;
+</script>
+
+<template>
+	<DaisyStat title="Downloads" value="31K" desc="Jan 1st - Feb 1st">
+		<template #figure>
+			<DaisyStatIcon :icon="downloadsIcon" color="secondary" />
+		</template>
+	</DaisyStat>
+	<DaisyStat title="New users" value="4,200" desc="This month">
+		<template #figure>
+			<DaisyStatImage src="/images/avatar.webp" alt="New user" />
+		</template>
+	</DaisyStat>
+</template>
+```

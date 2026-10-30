@@ -69,7 +69,8 @@ const props = defineProps({
       props.className,
     ]"
   >
-    <div v-if="props.title || props.value !== undefined || props.desc" class="stat">
+    <div v-if="props.title || props.value !== undefined || props.desc || $slots.figure" class="stat">
+      <slot name="figure" />
       <div
         v-if="props.title"
         class="stat-title"
